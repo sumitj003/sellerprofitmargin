@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Profit Margin Calculator for Etsy, Shopify & Amazon FBA | SellerProfitMargin</title>
-  <meta name="description" content="Calculate your exact profit, margin %, and break-even price for Etsy, Shopify, and Amazon FBA in seconds. Free seller profit calculator — no signup needed." />
-  <meta name="keywords" content="etsy profit calculator, shopify profit margin, amazon fba profit calculator, seller profit margin, ecommerce profit calculator" />
+  <title>Free Profit Margin Calculator — Etsy, Shopify, Amazon FBA, Walmart, eBay & TikTok Shop | SellerProfitMargin</title>
+  <meta name="description" content="Calculate your exact profit, margin %, and break-even price for Etsy, Shopify, Amazon FBA, Walmart, eBay and TikTok Shop. Free seller profit calculator — no signup needed." />
+  <meta name="keywords" content="etsy profit calculator, shopify profit margin, amazon fba profit calculator, walmart seller profit, ebay profit margin, tiktok shop fees, ecommerce profit calculator" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://sellerprofitmargin.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Free Profit Margin Calculator — Etsy, Shopify, Amazon FBA" />
-  <meta property="og:description" content="Know your exact profit before you sell. Free calculator for ecommerce sellers." />
+  <meta property="og:title" content="Free Profit Margin Calculator — Etsy, Shopify, Amazon FBA & More" />
+  <meta property="og:description" content="Know your exact profit before you sell. Free calculator for ecommerce sellers on 6 major platforms." />
   <meta property="og:url" content="https://sellerprofitmargin.com/" />
   <meta property="og:type" content="website" />
 
@@ -22,7 +22,7 @@
     "@type": "WebApplication",
     "name": "SellerProfitMargin Calculator",
     "url": "https://sellerprofitmargin.com",
-    "description": "Free profit margin calculator for Etsy, Shopify and Amazon FBA sellers",
+    "description": "Free profit margin calculator for Etsy, Shopify, Amazon FBA, Walmart, eBay and TikTok Shop sellers",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -40,19 +40,47 @@
   <!-- NAV -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">Seller<span>Profit</span>Margin</a>
-    <div class="nav-links">
-      <a href="etsy-profit-margin-guide.html">Etsy Guide</a>
-      <a href="amazon-fba-profit-explained.html">Amazon FBA</a>
-      <a href="shopify-profit-margin-formula.html">Shopify</a>
-      <a href="about.html">About</a>
-      <a href="index.html" class="nav-cta">Calculate Now</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="etsy-profit-margin-guide.html">Etsy Guide</a>
+        <a href="amazon-fba-profit-explained.html">Amazon FBA</a>
+        <a href="shopify-profit-margin-formula.html">Shopify</a>
+        <a href="about.html">About</a>
+        <a href="index.html" class="nav-cta">Calculate Now</a>
+      </div>
+
+      <!-- CURRENCY SWITCHER -->
+      <div id="currency-switcher">
+        <button id="currency-btn" onclick="toggleCurrencyDropdown()">USD $ ▾</button>
+        <div id="currency-dropdown">
+          <button class="curr-option active" data-code="USD" onclick="selectCurrency('USD')">
+            <span class="curr-symbol">$</span> USD — US Dollar
+          </button>
+          <button class="curr-option" data-code="EUR" onclick="selectCurrency('EUR')">
+            <span class="curr-symbol">€</span> EUR — Euro
+          </button>
+          <button class="curr-option" data-code="GBP" onclick="selectCurrency('GBP')">
+            <span class="curr-symbol">£</span> GBP — British Pound
+          </button>
+          <button class="curr-option" data-code="INR" onclick="selectCurrency('INR')">
+            <span class="curr-symbol">₹</span> INR — Indian Rupee
+          </button>
+          <button class="curr-option" data-code="CAD" onclick="selectCurrency('CAD')">
+            <span class="curr-symbol">C$</span> CAD — Canadian Dollar
+          </button>
+          <button class="curr-option" data-code="AUD" onclick="selectCurrency('AUD')">
+            <span class="curr-symbol">A$</span> AUD — Australian Dollar
+          </button>
+        </div>
+      </div>
     </div>
   </nav>
 
   <div class="wrapper">
+
     <!-- HERO -->
     <section class="calc-hero">
-      <div class="hero-tag fade-up delay-1">⚡ Etsy · Shopify · Amazon FBA · Dropshipping</div>
+      <div class="hero-tag fade-up delay-1">⚡ Etsy · Shopify · Amazon · Walmart · eBay · TikTok Shop</div>
       <h1 class="fade-up delay-2">Know Your <em>Real Profit</em><br/>Before You Sell</h1>
       <p class="fade-up delay-3">Stop guessing margins. Calculate exact profit, margin %, and break-even price for any platform — free, instant, no signup required.</p>
     </section>
@@ -62,58 +90,91 @@
 
     <!-- PLATFORM TABS -->
     <div class="tabs fade-up delay-4">
-      <button class="tab active" onclick="setPreset('etsy', this)">🛍️ Etsy (6.5%)</button>
-      <button class="tab" onclick="setPreset('shopify', this)">🔵 Shopify (2.9%)</button>
-      <button class="tab" onclick="setPreset('amazon', this)">📦 Amazon FBA (15%)</button>
+      <button class="tab active" onclick="setPreset('etsy', this)">🛍️ Etsy</button>
+      <button class="tab" onclick="setPreset('shopify', this)">🔵 Shopify</button>
+      <button class="tab" onclick="setPreset('amazon', this)">📦 Amazon FBA</button>
+      <button class="tab" onclick="setPreset('walmart', this)">🟡 Walmart</button>
+      <button class="tab" onclick="setPreset('ebay', this)">🔴 eBay</button>
+      <button class="tab" onclick="setPreset('tiktok', this)">🎵 TikTok Shop</button>
       <button class="tab" onclick="setPreset('custom', this)">⚙️ Custom</button>
     </div>
 
     <!-- CALCULATOR CARD -->
     <div class="calc-card fade-up delay-4">
       <div class="calc-grid">
+
         <div class="field">
           <label>Selling Price</label>
           <div class="field-wrap">
-            <span class="prefix">$</span>
+            <span class="prefix currency-symbol">$</span>
             <input type="number" id="price" placeholder="29.99" min="0" step="0.01" />
           </div>
         </div>
+
         <div class="field">
           <label>Product / COGS Cost</label>
           <div class="field-wrap">
-            <span class="prefix">$</span>
+            <span class="prefix currency-symbol">$</span>
             <input type="number" id="cost" placeholder="8.00" min="0" step="0.01" />
           </div>
         </div>
+
         <div class="field">
           <label>Shipping Cost</label>
           <div class="field-wrap">
-            <span class="prefix">$</span>
+            <span class="prefix currency-symbol">$</span>
             <input type="number" id="shipping" placeholder="3.50" min="0" step="0.01" />
           </div>
         </div>
+
         <div class="field">
           <label>Ad Spend</label>
           <div class="field-wrap">
-            <span class="prefix">$</span>
+            <span class="prefix currency-symbol">$</span>
             <input type="number" id="ads" placeholder="0.00" min="0" step="0.01" />
           </div>
         </div>
+
+        <!-- PLATFORM FEE WITH TOOLTIP -->
         <div class="field full">
-          <label>Platform Fee %</label>
+          <label>
+            Platform Fee %
+            <div class="tooltip-wrapper">
+              <button class="tooltip-btn" id="tooltip-btn" onclick="toggleTooltip(event)" type="button" aria-label="Fee info">?</button>
+              <div class="tooltip-box" id="fee-tooltip-box">
+                <span id="fee-tooltip-text">Etsy charges 6.5% transaction fee on sale price + $0.20 listing fee per item + ~3% + $0.25 payment processing. Offsite Ads adds 12–15% on eligible sales.</span>
+              </div>
+            </div>
+          </label>
           <div class="field-wrap">
             <input type="number" id="fee" placeholder="6.5" min="0" max="100" step="0.1" />
             <span class="suffix">%</span>
           </div>
+
+          <!-- Fee quick-set presets -->
           <div class="fee-presets">
             <button class="fee-preset" onclick="setFee(6.5)">Etsy 6.5%</button>
             <button class="fee-preset" onclick="setFee(2.9)">Shopify 2.9%</button>
             <button class="fee-preset" onclick="setFee(15)">Amazon 15%</button>
-            <button class="fee-preset" onclick="setFee(5)">eBay ~5%</button>
+            <button class="fee-preset" onclick="setFee(8)">Walmart 8%</button>
+            <button class="fee-preset" onclick="setFee(13)">eBay 13%</button>
+            <button class="fee-preset" onclick="setFee(6)">TikTok 6%</button>
             <button class="fee-preset" onclick="setFee(0)">No Fee</button>
           </div>
+
+          <!-- ETSY OFFSITE ADS TOGGLE -->
+          <div class="offsite-row" id="offsite-row" style="display:flex;">
+            <div class="offsite-label">
+              Etsy Offsite Ads
+              <span>Add 12% fee on attributed sales — applies if Etsy promotes your listing externally</span>
+            </div>
+            <div class="toggle-switch" id="offsite-toggle" onclick="toggleOffsiteAds()">
+              <div class="toggle-track"></div>
+            </div>
+          </div>
         </div>
-      </div>
+
+      </div><!-- end calc-grid -->
 
       <button class="calc-btn" onclick="calculate()">Calculate My Profit →</button>
 
@@ -125,7 +186,7 @@
             <div class="result-value" id="r-profit">—</div>
           </div>
           <div class="result-box">
-            <div class="result-label">Margin %</div>
+            <div class="result-label">Profit Margin</div>
             <div class="result-value neutral" id="r-margin">—</div>
           </div>
           <div class="result-box">
@@ -134,21 +195,54 @@
           </div>
         </div>
 
+        <!-- COST BREAKDOWN -->
         <div class="breakdown">
           <div class="breakdown-title">Cost Breakdown</div>
-          <div class="breakdown-row"><span class="label">Selling Price</span><span class="val" id="b-price">—</span></div>
-          <div class="breakdown-row"><span class="label">Product Cost</span><span class="val deduct" id="b-cost">—</span></div>
-          <div class="breakdown-row"><span class="label">Shipping</span><span class="val deduct" id="b-shipping">—</span></div>
-          <div class="breakdown-row"><span class="label">Platform Fee</span><span class="val deduct" id="b-fee">—</span></div>
-          <div class="breakdown-row"><span class="label">Ad Spend</span><span class="val deduct" id="b-ads">—</span></div>
+
+          <div class="breakdown-row">
+            <span class="label">Selling Price</span>
+            <span class="val" id="b-price">—</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="label">Product Cost</span>
+            <span class="val deduct" id="b-cost">—</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="label">Shipping</span>
+            <span class="val deduct" id="b-shipping">—</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="label">Platform Fee</span>
+            <span class="val deduct" id="b-fee">—</span>
+          </div>
+
+          <!-- Etsy-only extra rows -->
+          <div class="breakdown-row etsy-extra" id="b-etsy-listing-row" style="display:flex;">
+            <span class="label">↳ Listing Fee</span>
+            <span class="val deduct" id="b-etsy-listing">—</span>
+          </div>
+          <div class="breakdown-row etsy-extra" id="b-etsy-processing-row" style="display:flex;">
+            <span class="label">↳ Payment Processing</span>
+            <span class="val deduct" id="b-etsy-processing">—</span>
+          </div>
+          <div class="breakdown-row etsy-extra" id="b-offsite-row-result" style="display:none;">
+            <span class="label">↳ Offsite Ads Fee</span>
+            <span class="val deduct" id="b-offsite-fee">—</span>
+          </div>
+
+          <div class="breakdown-row">
+            <span class="label">Ad Spend</span>
+            <span class="val deduct" id="b-ads">—</span>
+          </div>
           <div class="breakdown-row" style="margin-top:4px">
             <span class="label" style="font-weight:600;color:var(--text)">Net Profit</span>
             <span class="val total" id="b-total">—</span>
           </div>
         </div>
+
         <div class="insight" id="insight"></div>
-      </div>
-    </div>
+      </div><!-- end results -->
+    </div><!-- end calc-card -->
 
     <!-- AD SLOT MID -->
     <div class="ad-slot"><!-- AdSense: Mid page ad --></div>
@@ -178,14 +272,14 @@
       </div>
     </div>
 
-    <!-- WHY USE THIS SECTION -->
+    <!-- WHY USE THIS -->
     <section style="margin-top:64px;padding-bottom:20px">
       <div class="section-label">Why sellers use this calculator</div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
           <div style="font-size:1.4rem;margin-bottom:10px">🎯</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Platform-specific fees</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">Pre-loaded with Etsy 6.5%, Shopify 2.9%, Amazon 15% — accurate from day one.</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">6 platforms supported</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">Etsy, Shopify, Amazon FBA, Walmart, eBay & TikTok Shop — all pre-loaded with accurate fees.</div>
         </div>
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
           <div style="font-size:1.4rem;margin-bottom:10px">⚡</div>
@@ -193,9 +287,9 @@
           <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">No signup, no loading, no nonsense. Enter your numbers and see your profit in seconds.</div>
         </div>
         <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
-          <div style="font-size:1.4rem;margin-bottom:10px">💡</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Smart insights</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">We tell you if your margin is too thin and exactly what price to charge for 20%+ margin.</div>
+          <div style="font-size:1.4rem;margin-bottom:10px">💱</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Multi-currency</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">Switch between USD, EUR, GBP, INR, CAD and AUD using the currency selector in the top right.</div>
         </div>
       </div>
     </section>
@@ -208,12 +302,12 @@
         <div class="faq-a">Profit margin = (Net Profit ÷ Selling Price) × 100. Net profit is your selling price minus product cost, shipping, platform fee, and ad spend. A healthy margin for ecommerce is typically 20–40%.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What is the Etsy seller fee in 2024?</div>
-        <div class="faq-a">Etsy charges a 6.5% transaction fee on the sale price including shipping. There is also a $0.20 listing fee per item and a payment processing fee of ~3% + $0.25. For simplicity, enter 6.5–10% depending on your setup.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">What is the Etsy seller fee in 2025?</div>
+        <div class="faq-a">Etsy charges a 6.5% transaction fee on the full sale price including shipping, a $0.20 listing fee per item, and payment processing of ~3% + $0.25 per transaction. If Etsy promotes your listing externally via Offsite Ads, an additional 12–15% fee applies to those sales. Our calculator includes all these when you use the Etsy tab and toggle Offsite Ads on if applicable.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">What is a good profit margin for Amazon FBA?</div>
-        <div class="faq-a">Most successful Amazon sellers target 25–40% net margin. Amazon charges ~15% referral fee plus FBA fulfillment fees. Aim for minimum 20% margin to cover returns, storage fees, and PPC costs.</div>
+        <div class="faq-a">Most successful Amazon sellers target 25–35% net margin. Amazon charges ~15% referral fee plus FBA fulfillment fees. Aim for minimum 20% margin to cover returns, storage fees, and PPC costs.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">How do I calculate break-even price?</div>
@@ -225,7 +319,15 @@
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Can I use this for Shopify dropshipping?</div>
-        <div class="faq-a">Absolutely. Enter your product cost (supplier price), shipping cost, Shopify's 2.9% fee, and your ad spend. The calculator gives you your real net profit after all costs including advertising.</div>
+        <div class="faq-a">Absolutely. Select the Shopify tab (pre-loaded at 2.9%), enter your supplier price as product cost, add shipping, and include your ad spend. The $39/month Shopify subscription is a fixed cost — divide it by your monthly order volume and add it to the product cost field for a fully accurate margin.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What are TikTok Shop fees?</div>
+        <div class="faq-a">TikTok Shop currently charges around 6% referral fee on most product categories, plus payment processing of approximately 2%. If you use their affiliate creator program, creators typically earn 5–20% commission which is an additional cost on affiliate-attributed sales.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How does the currency switcher work?</div>
+        <div class="faq-a">The currency selector in the top right corner lets you switch between USD, EUR, GBP, INR, CAD and AUD. All results — profit, break-even, and insight figures — convert using current approximate exchange rates. Enter your numbers in your selling currency and results display accordingly.</div>
       </div>
     </div>
 
@@ -255,7 +357,8 @@
         </a>
       </div>
     </section>
-  </div>
+
+  </div><!-- end wrapper -->
 
   <!-- FOOTER -->
   <footer class="footer">
