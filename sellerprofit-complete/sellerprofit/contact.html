@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | SellerProfitMargin.com</title>
+  <meta name="description" content="Contact the SellerProfitMargin team. Questions, feedback, bug reports, or partnership inquiries — we'd love to hear from you." />
+  <link rel="canonical" href="https://sellerprofitmargin.com/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Seller<span>Profit</span>Margin</a>
+    <div class="nav-links">
+      <a href="/blog/article-1.html">Etsy Guide</a>
+      <a href="/blog/article-2.html">Amazon FBA</a>
+      <a href="/blog/article-3.html">Shopify</a>
+      <a href="/about.html">About</a>
+      <a href="/" class="nav-cta">Calculate Now</a>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <div class="page-hero fade-up delay-1">
+      <h1>Contact Us</h1>
+      <p>Questions, feedback, bug reports, or partnership inquiries — we read every message and reply within 48 hours.</p>
+    </div>
+
+    <div class="contact-form fade-up delay-2">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center">
+          <div style="font-size:1.4rem;margin-bottom:8px">🐛</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);font-size:0.9rem;margin-bottom:4px">Report a Bug</div>
+          <div style="font-size:0.78rem;color:var(--muted)">Calculator not working? Let us know.</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;text-align:center">
+          <div style="font-size:1.4rem;margin-bottom:8px">💡</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);font-size:0.9rem;margin-bottom:4px">Feature Request</div>
+          <div style="font-size:0.78rem;color:var(--muted)">Want a new platform or feature?</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:36px">
+        <h2 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:24px;color:var(--text)">Send us a message</h2>
+
+        <form onsubmit="submitContact(event)">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select>
+              <option>General Question</option>
+              <option>Bug Report</option>
+              <option>Feature Request</option>
+              <option>Partnership / Affiliate</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <button type="submit" id="contact-btn" class="btn-primary" style="width:100%">Send Message →</button>
+        </form>
+
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:16px;text-align:center">We typically reply within 24–48 hours. For urgent issues, include your browser and device in the message.</p>
+      </div>
+
+      <div style="margin-top:24px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px">
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:10px;font-size:0.95rem">Direct email</h3>
+        <p style="color:var(--muted);font-size:0.88rem">You can also reach us directly at <a href="mailto:hello@sellerprofitmargin.com" style="color:var(--accent)">hello@sellerprofitmargin.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+    <p>© 2025 SellerProfitMargin.com · Free tool for ecommerce sellers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
