@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Profit Margin Calculator for Etsy, Shopify & Amazon FBA | SellerProfitMargin</title>
+  <meta name="description" content="Calculate your exact profit, margin %, and break-even price for Etsy, Shopify, and Amazon FBA in seconds. Free seller profit calculator — no signup needed." />
+  <meta name="keywords" content="etsy profit calculator, shopify profit margin, amazon fba profit calculator, seller profit margin, ecommerce profit calculator" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sellerprofitmargin.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Profit Margin Calculator — Etsy, Shopify, Amazon FBA" />
+  <meta property="og:description" content="Know your exact profit before you sell. Free calculator for ecommerce sellers." />
+  <meta property="og:url" content="https://sellerprofitmargin.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SellerProfitMargin Calculator",
+    "url": "https://sellerprofitmargin.com",
+    "description": "Free profit margin calculator for Etsy, Shopify and Amazon FBA sellers",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">Seller<span>Profit</span>Margin</a>
+    <div class="nav-links">
+      <a href="/blog/article-1.html">Etsy Guide</a>
+      <a href="/blog/article-2.html">Amazon FBA</a>
+      <a href="/blog/article-3.html">Shopify</a>
+      <a href="/about.html">About</a>
+      <a href="/" class="nav-cta">Calculate Now</a>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <!-- HERO -->
+    <section class="calc-hero">
+      <div class="hero-tag fade-up delay-1">⚡ Etsy · Shopify · Amazon FBA · Dropshipping</div>
+      <h1 class="fade-up delay-2">Know Your <em>Real Profit</em><br/>Before You Sell</h1>
+      <p class="fade-up delay-3">Stop guessing margins. Calculate exact profit, margin %, and break-even price for any platform — free, instant, no signup required.</p>
+    </section>
+
+    <!-- AD SLOT TOP -->
+    <div class="ad-slot"><!-- AdSense: Replace with your ad code after approval --></div>
+
+    <!-- PLATFORM TABS -->
+    <div class="tabs fade-up delay-4">
+      <button class="tab active" onclick="setPreset('etsy', this)">🛍️ Etsy (6.5%)</button>
+      <button class="tab" onclick="setPreset('shopify', this)">🔵 Shopify (2.9%)</button>
+      <button class="tab" onclick="setPreset('amazon', this)">📦 Amazon FBA (15%)</button>
+      <button class="tab" onclick="setPreset('custom', this)">⚙️ Custom</button>
+    </div>
+
+    <!-- CALCULATOR CARD -->
+    <div class="calc-card fade-up delay-4">
+      <div class="calc-grid">
+        <div class="field">
+          <label>Selling Price</label>
+          <div class="field-wrap">
+            <span class="prefix">$</span>
+            <input type="number" id="price" placeholder="29.99" min="0" step="0.01" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Product / COGS Cost</label>
+          <div class="field-wrap">
+            <span class="prefix">$</span>
+            <input type="number" id="cost" placeholder="8.00" min="0" step="0.01" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Shipping Cost</label>
+          <div class="field-wrap">
+            <span class="prefix">$</span>
+            <input type="number" id="shipping" placeholder="3.50" min="0" step="0.01" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Ad Spend</label>
+          <div class="field-wrap">
+            <span class="prefix">$</span>
+            <input type="number" id="ads" placeholder="0.00" min="0" step="0.01" />
+          </div>
+        </div>
+        <div class="field full">
+          <label>Platform Fee %</label>
+          <div class="field-wrap">
+            <input type="number" id="fee" placeholder="6.5" min="0" max="100" step="0.1" />
+            <span class="suffix">%</span>
+          </div>
+          <div class="fee-presets">
+            <button class="fee-preset" onclick="setFee(6.5)">Etsy 6.5%</button>
+            <button class="fee-preset" onclick="setFee(2.9)">Shopify 2.9%</button>
+            <button class="fee-preset" onclick="setFee(15)">Amazon 15%</button>
+            <button class="fee-preset" onclick="setFee(5)">eBay ~5%</button>
+            <button class="fee-preset" onclick="setFee(0)">No Fee</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate My Profit →</button>
+
+      <!-- RESULTS -->
+      <div class="results" id="results">
+        <div class="results-grid" style="margin-top:28px">
+          <div class="result-box highlight">
+            <div class="result-label">Net Profit</div>
+            <div class="result-value" id="r-profit">—</div>
+          </div>
+          <div class="result-box">
+            <div class="result-label">Margin %</div>
+            <div class="result-value neutral" id="r-margin">—</div>
+          </div>
+          <div class="result-box">
+            <div class="result-label">Break-Even Price</div>
+            <div class="result-value neutral" id="r-breakeven">—</div>
+          </div>
+        </div>
+
+        <div class="breakdown">
+          <div class="breakdown-title">Cost Breakdown</div>
+          <div class="breakdown-row"><span class="label">Selling Price</span><span class="val" id="b-price">—</span></div>
+          <div class="breakdown-row"><span class="label">Product Cost</span><span class="val deduct" id="b-cost">—</span></div>
+          <div class="breakdown-row"><span class="label">Shipping</span><span class="val deduct" id="b-shipping">—</span></div>
+          <div class="breakdown-row"><span class="label">Platform Fee</span><span class="val deduct" id="b-fee">—</span></div>
+          <div class="breakdown-row"><span class="label">Ad Spend</span><span class="val deduct" id="b-ads">—</span></div>
+          <div class="breakdown-row" style="margin-top:4px">
+            <span class="label" style="font-weight:600;color:var(--text)">Net Profit</span>
+            <span class="val total" id="b-total">—</span>
+          </div>
+        </div>
+        <div class="insight" id="insight"></div>
+      </div>
+    </div>
+
+    <!-- AD SLOT MID -->
+    <div class="ad-slot"><!-- AdSense: Mid page ad --></div>
+
+    <!-- AFFILIATE SECTION -->
+    <div class="affiliate-section">
+      <div class="section-label">Recommended tools for sellers</div>
+      <div class="affiliate-grid">
+        <a class="aff-card" href="https://shopify.com" target="_blank" rel="noopener sponsored">
+          <span class="aff-icon">🔵</span>
+          <div class="aff-title">Start on Shopify</div>
+          <div class="aff-desc">Launch your store in minutes. Best for scaling past Etsy. Free trial available.</div>
+          <div class="aff-cta">Try free for 3 days →</div>
+        </a>
+        <a class="aff-card" href="https://erank.com" target="_blank" rel="noopener sponsored">
+          <span class="aff-icon">📈</span>
+          <div class="aff-title">Etsy SEO with eRank</div>
+          <div class="aff-desc">Find winning keywords, track competitors, and rank your Etsy listings higher.</div>
+          <div class="aff-cta">Get started free →</div>
+        </a>
+        <a class="aff-card" href="https://junglescout.com" target="_blank" rel="noopener sponsored">
+          <span class="aff-icon">🌿</span>
+          <div class="aff-title">Amazon FBA Research</div>
+          <div class="aff-desc">Jungle Scout finds profitable products, validates demand, and tracks BSR trends.</div>
+          <div class="aff-cta">Find your product →</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- WHY USE THIS SECTION -->
+    <section style="margin-top:64px;padding-bottom:20px">
+      <div class="section-label">Why sellers use this calculator</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
+          <div style="font-size:1.4rem;margin-bottom:10px">🎯</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Platform-specific fees</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">Pre-loaded with Etsy 6.5%, Shopify 2.9%, Amazon 15% — accurate from day one.</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
+          <div style="font-size:1.4rem;margin-bottom:10px">⚡</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Instant results</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">No signup, no loading, no nonsense. Enter your numbers and see your profit in seconds.</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
+          <div style="font-size:1.4rem;margin-bottom:10px">💡</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Smart insights</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">We tell you if your margin is too thin and exactly what price to charge for 20%+ margin.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How is profit margin calculated?</div>
+        <div class="faq-a">Profit margin = (Net Profit ÷ Selling Price) × 100. Net profit is your selling price minus product cost, shipping, platform fee, and ad spend. A healthy margin for ecommerce is typically 20–40%.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the Etsy seller fee in 2024?</div>
+        <div class="faq-a">Etsy charges a 6.5% transaction fee on the sale price including shipping. There is also a $0.20 listing fee per item and a payment processing fee of ~3% + $0.25. For simplicity, enter 6.5–10% depending on your setup.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is a good profit margin for Amazon FBA?</div>
+        <div class="faq-a">Most successful Amazon sellers target 25–40% net margin. Amazon charges ~15% referral fee plus FBA fulfillment fees. Aim for minimum 20% margin to cover returns, storage fees, and PPC costs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do I calculate break-even price?</div>
+        <div class="faq-a">Break-even is the minimum price you need to charge to cover all costs — product, shipping, fees, ads — with zero profit. Our calculator shows this automatically. Price below this and you're losing money on every sale.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does this work for digital products?</div>
+        <div class="faq-a">Yes — set shipping and product cost to $0 for digital items. Your only costs are the platform fee and any ad spend. Digital products typically have the highest margins on Etsy, often 60–90%.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I use this for Shopify dropshipping?</div>
+        <div class="faq-a">Absolutely. Enter your product cost (supplier price), shipping cost, Shopify's 2.9% fee, and your ad spend. The calculator gives you your real net profit after all costs including advertising.</div>
+      </div>
+    </div>
+
+    <!-- ARTICLE LINKS -->
+    <section style="padding-bottom:80px">
+      <div class="section-label">Learn more</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <a href="/blog/article-1.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">How to Calculate Etsy Profit Margin</div>
+          <div style="font-size:0.8rem;color:var(--muted)">Step-by-step formula with examples →</div>
+        </a>
+        <a href="/blog/article-2.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">Amazon FBA Profit Explained</div>
+          <div style="font-size:0.8rem;color:var(--muted)">All fees, margins, and real examples →</div>
+        </a>
+        <a href="/blog/article-3.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">Shopify Profit Margin Formula</div>
+          <div style="font-size:0.8rem;color:var(--muted)">Calculate Shopify margins correctly →</div>
+        </a>
+        <a href="/blog/article-4.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">What is a Good Ecommerce Margin?</div>
+          <div style="font-size:0.8rem;color:var(--muted)">Benchmarks by platform and niche →</div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/blog/article-1.html">Blog</a>
+    </div>
+    <p>© 2025 SellerProfitMargin.com · Free tool for ecommerce sellers · Not affiliated with Etsy, Shopify, or Amazon</p>
+    <p style="margin-top:6px;font-size:0.75rem">Affiliate disclosure: Some links on this site are affiliate links. We may earn a commission at no extra cost to you.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
