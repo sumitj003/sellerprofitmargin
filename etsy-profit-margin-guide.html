@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-32C5GN2WMZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-32C5GN2WMZ');
-</script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-32C5GN2WMZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-32C5GN2WMZ');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to Calculate Etsy Profit Margin (2025 Complete Guide) | SellerProfitMargin</title>
@@ -29,10 +29,62 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* eRank affiliate callout box */
+    .erank-box {
+      background: linear-gradient(135deg, rgba(5,150,105,0.06), rgba(16,185,129,0.04));
+      border: 1px solid rgba(5,150,105,0.25);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 32px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .erank-icon { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+    .erank-content {}
+    .erank-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--article-accent);
+      margin-bottom: 5px;
+    }
+    .erank-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--article-heading);
+      margin-bottom: 6px;
+    }
+    .erank-desc {
+      font-size: 0.88rem;
+      color: var(--article-muted);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .erank-btn {
+      display: inline-block;
+      background: var(--article-accent);
+      color: #fff;
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .erank-btn:hover { background: #047857; transform: translateY(-1px); }
+    .erank-note {
+      font-size: 0.75rem;
+      color: var(--article-muted);
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body class="light">
-
   <nav class="nav">
     <a href="index.html" class="nav-logo">Seller<span>Profit</span>Margin</a>
     <div class="nav-links">
@@ -87,14 +139,12 @@
 
         <p>Let's walk through a complete, realistic example. You sell a handmade soy candle for $45 on Etsy with $5 shipping. Here's what your costs actually look like:</p>
 
-        <!-- Bar chart: cost breakdown -->
         <div class="chart-box">
           <div class="chart-title">Cost Breakdown — $45 Etsy Candle</div>
           <div class="chart-sub">Where your $45 actually goes</div>
           <canvas id="chart1" height="200"></canvas>
         </div>
 
-        <p>Breaking it down numerically:</p>
         <ul>
           <li>Product cost (wax, wick, jar, fragrance): <strong>$8.00</strong></li>
           <li>Packaging + shipping label: <strong>$5.50</strong></li>
@@ -117,7 +167,6 @@
 
         <p>Etsy has several fees that sellers need to account for. Understanding each one is essential for accurate margin calculation.</p>
 
-        <!-- Fees breakdown chart -->
         <div class="chart-box">
           <div class="chart-title">Etsy Fee Types (2025)</div>
           <div class="chart-sub">All the fees Etsy charges sellers</div>
@@ -139,16 +188,26 @@
         <h3>Offsite Ads Fee (12–15%)</h3>
         <p>If Etsy promotes your item externally (Google Shopping, Facebook, etc.) and it results in a sale, Etsy charges 15% (or 12% if you earn over $10,000/year). You cannot opt out of this if your annual revenue exceeds $10,000.</p>
 
+        <!-- eRank affiliate box #1 — after fees section, highly relevant context -->
+        <div class="erank-box">
+          <div class="erank-icon">📈</div>
+          <div class="erank-content">
+            <div class="erank-label">Recommended Tool for Etsy Sellers</div>
+            <div class="erank-title">Rank higher on Etsy with eRank SEO</div>
+            <div class="erank-desc">Once you've got your profit margins right, the next step is getting your listings found. eRank helps Etsy sellers find high-traffic keywords, track competitor rankings, and optimise listings to appear higher in Etsy search — driving more sales at the same margin.</div>
+            <a href="https://erank.com?fpr=sumit74" target="_blank" rel="noopener sponsored" class="erank-btn">Try eRank Free →</a>
+            <div class="erank-note">Free plan available · Used by 1M+ Etsy sellers</div>
+          </div>
+        </div>
+
         <h2 id="good-margin">What is a Good Profit Margin for Etsy?</h2>
 
-        <!-- Margin benchmark chart -->
         <div class="chart-box">
           <div class="chart-title">Etsy Profit Margin Benchmarks</div>
           <div class="chart-sub">Where does your margin stand?</div>
           <canvas id="chart3" height="180"></canvas>
         </div>
 
-        <p>Here's how to interpret your Etsy margin:</p>
         <ul>
           <li><strong>Below 15%:</strong> Danger zone. You're barely covering costs. Any increase in material prices or ad spend will make you unprofitable.</li>
           <li><strong>15–25%:</strong> Acceptable but tight. You have some cushion but not much room for growth or experimentation.</li>
@@ -168,8 +227,8 @@
         <h3>2. Reduce materials cost</h3>
         <p>Buy supplies in bulk, find alternative suppliers, or negotiate better rates. If you're buying wax for candles at $3/lb retail, switching to a wholesale supplier at $1.80/lb immediately improves your margin on every single sale.</p>
 
-        <h3>3. Optimize your shipping</h3>
-        <p>Weigh every package accurately to avoid overpaying. Use Etsy's discounted shipping labels (up to 30% off retail rates). Consider whether free shipping (built into price) or separate shipping charges gives you a better total margin.</p>
+        <h3>3. Optimise your Etsy SEO to reduce ad spend</h3>
+        <p>If you're spending heavily on Etsy Ads to get visibility, improving your organic search ranking means fewer paid clicks needed for the same sales volume — directly improving your margin. Tools like <a href="https://erank.com?fpr=sumit74" target="_blank" rel="noopener sponsored">eRank</a> help you find the keywords your buyers actually search, so your listings rank without paying for every click.</p>
 
         <h3>4. Kill underperforming Etsy Ads</h3>
         <p>Review your Etsy Ads data regularly. Cut any ad listings with a ROAS (Return on Ad Spend) below 3x. Keep only listings where ad spend is generating profitable sales.</p>
@@ -180,7 +239,7 @@
         <div class="article-cta">
           <h3>Calculate your real Etsy margin now</h3>
           <p>Enter your numbers into our free calculator — see your exact profit, margin %, and break-even price instantly.</p>
-          <a href="/">Use the Free Calculator →</a>
+          <a href="index.html">Use the Free Calculator →</a>
         </div>
 
         <h2 id="mistakes">5 Profit Calculation Mistakes Etsy Sellers Make</h2>
@@ -211,6 +270,18 @@
         <div class="callout blue">
           <div class="callout-title">Pro tip</div>
           Run the calculator before you set your price — not after. Many sellers price based on gut feel or competitor prices, then discover their margin is 8%. Calculate your target margin first, then set the price that achieves it.
+        </div>
+
+        <!-- eRank affiliate box #2 — end of article, high intent moment -->
+        <div class="erank-box">
+          <div class="erank-icon">🚀</div>
+          <div class="erank-content">
+            <div class="erank-label">Next Step After Calculating Profit</div>
+            <div class="erank-title">Get more Etsy sales with better SEO</div>
+            <div class="erank-desc">You now know your margin. The next step is getting enough sales volume to make it count. eRank is the #1 SEO tool for Etsy sellers — find profitable keywords, audit your listings, and track exactly where you rank in Etsy search results.</div>
+            <a href="https://erank.com?fpr=sumit74" target="_blank" rel="noopener sponsored" class="erank-btn">Start Free with eRank →</a>
+            <div class="erank-note">Free plan includes keyword research · No credit card required</div>
+          </div>
         </div>
 
         <h2>Summary</h2>
@@ -245,68 +316,31 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
   <script>
-    // Chart 1: Cost Breakdown bar
     new Chart(document.getElementById('chart1'), {
       type: 'bar',
       data: {
         labels: ['Product Cost', 'Shipping', 'Transaction Fee', 'Processing Fee', 'Listing Fee', 'Net Profit'],
-        datasets: [{
-          data: [8.00, 5.50, 3.25, 1.60, 0.20, 26.45],
-          backgroundColor: ['#ef4444','#f97316','#f59e0b','#eab308','#84cc16','#059669'],
-          borderRadius: 6, borderSkipped: false
-        }]
+        datasets: [{ data: [8.00, 5.50, 3.25, 1.60, 0.20, 26.45], backgroundColor: ['#ef4444','#f97316','#f59e0b','#eab308','#84cc16','#059669'], borderRadius: 6, borderSkipped: false }]
       },
-      options: {
-        responsive: true, plugins: { legend: { display: false } },
-        scales: {
-          y: { ticks: { callback: v => '$' + v }, grid: { color: '#f3f4f6' } },
-          x: { grid: { display: false } }
-        }
-      }
+      options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { ticks: { callback: v => '$' + v }, grid: { color: '#f3f4f6' } }, x: { grid: { display: false } } } }
     });
-
-    // Chart 2: Etsy fee types horizontal bar
     new Chart(document.getElementById('chart2'), {
       type: 'bar',
       data: {
         labels: ['Transaction Fee', 'Payment Processing', 'Offsite Ads', 'Listing Fee'],
-        datasets: [{
-          label: 'Fee %',
-          data: [6.5, 3.25, 15, 0],
-          backgroundColor: ['#7c3aed','#2563eb','#dc2626','#6b7280'],
-          borderRadius: 6, borderSkipped: false
-        }]
+        datasets: [{ label: 'Fee %', data: [6.5, 3.25, 15, 0], backgroundColor: ['#7c3aed','#2563eb','#dc2626','#6b7280'], borderRadius: 6, borderSkipped: false }]
       },
-      options: {
-        indexAxis: 'y', responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { callback: v => v + '%' }, grid: { color: '#f3f4f6' } },
-          y: { grid: { display: false } }
-        }
-      }
+      options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } }, scales: { x: { ticks: { callback: v => v + '%' }, grid: { color: '#f3f4f6' } }, y: { grid: { display: false } } } }
     });
-
-    // Chart 3: Margin benchmarks
     new Chart(document.getElementById('chart3'), {
       type: 'bar',
       data: {
-        labels: ['Danger Zone\n(<15%)', 'Acceptable\n(15–25%)', 'Healthy\n(25–40%)', 'Excellent\n(40%+)'],
-        datasets: [{
-          data: [15, 25, 40, 90],
-          backgroundColor: ['#ef4444','#f59e0b','#059669','#2563eb'],
-          borderRadius: 6, borderSkipped: false
-        }]
+        labels: ['Danger Zone (<15%)', 'Acceptable (15–25%)', 'Healthy (25–40%)', 'Excellent (40%+)'],
+        datasets: [{ data: [15, 25, 40, 90], backgroundColor: ['#ef4444','#f59e0b','#059669','#2563eb'], borderRadius: 6, borderSkipped: false }]
       },
-      options: {
-        responsive: true, plugins: { legend: { display: false } },
-        scales: {
-          y: { ticks: { callback: v => v + '%' }, grid: { color: '#f3f4f6' } },
-          x: { grid: { display: false } }
-        }
-      }
+      options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { ticks: { callback: v => v + '%' }, grid: { color: '#f3f4f6' } }, x: { grid: { display: false } } } }
     });
   </script>
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
