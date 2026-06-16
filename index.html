@@ -237,14 +237,22 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">Seller<span>Profit</span>Margin</a>
+    <a href="/" class="nav-logo">Seller<span>Profit</span>Margin</a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="etsy-profit-margin-guide.html">Etsy Guide</a>
-        <a href="amazon-fba-profit-explained.html">Amazon FBA</a>
-        <a href="shopify-profit-margin-formula.html">Shopify</a>
-        <a href="about.html">About</a>
-        <a href="index.html" class="nav-cta">Calculate Now</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" onclick="toggleNavDropdown(event)">Guides <span class="chev">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <a href="etsy-profit-margin-guide" class="nav-dd-item"><strong>Etsy Guide</strong><span>Profit margin formula + fees</span></a>
+            <a href="amazon-fba-profit-explained" class="nav-dd-item"><strong>Amazon FBA Guide</strong><span>Fees, margins, real examples</span></a>
+            <a href="shopify-profit-margin-formula" class="nav-dd-item"><strong>Shopify Guide</strong><span>Margin formula + benchmarks</span></a>
+            <a href="walmart-profit-calculator-guide" class="nav-dd-item"><strong>Walmart Guide</strong><span>Seller fees explained</span></a>
+            <a href="good-ecommerce-profit-margin" class="nav-dd-item"><strong>Good Margin Benchmarks</strong><span>What's healthy by platform</span></a>
+            <a href="ecommerce-profit-mistakes" class="nav-dd-item"><strong>Gross vs Net Profit</strong><span>The difference explained</span></a>
+          </div>
+        </div>
+        <a href="about">About</a>
+        <a href="/" class="nav-cta">Calculate Now</a>
       </div>
       <div id="currency-switcher">
         <button id="currency-btn" onclick="toggleCurrencyDropdown()">USD $ ▾</button>
@@ -513,24 +521,25 @@
           <h3>🛍️ Etsy Seller Fees 2025</h3>
           <span class="fee-tag">6.5% + $0.20 + ~3.25%</span>
           <p style="margin-top:8px">Etsy charges a <strong>6.5% transaction fee</strong> on the full sale price including shipping, a <strong>$0.20 listing fee</strong> per item, and <strong>~3% + $0.25 payment processing</strong>. Offsite Ads adds 12–15% on qualifying sales. Use the Etsy tab above to calculate your exact margin.</p>
-          <a href="etsy-profit-margin-guide.html" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Etsy fee guide →</a>
+          <a href="etsy-profit-margin-guide" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Etsy fee guide →</a>
         </div>
         <div class="seo-platform-card">
           <h3>📦 Amazon FBA Fees Explained</h3>
           <span class="fee-tag">15% referral + $3–$8 FBA</span>
           <p style="margin-top:8px">Amazon charges a <strong>~15% referral fee</strong> on most categories plus <strong>FBA fulfillment fees</strong> of $3.22–$8+ per unit based on size and weight. Add monthly storage fees and PPC advertising costs for accurate margin calculation.</p>
-          <a href="amazon-fba-profit-explained.html" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Amazon FBA fee guide →</a>
+          <a href="amazon-fba-profit-explained" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Amazon FBA fee guide →</a>
         </div>
         <div class="seo-platform-card">
           <h3>🔵 Shopify Profit Margin Formula</h3>
           <span class="fee-tag">2.9% + $0.30 per order</span>
           <p style="margin-top:8px">Shopify Payments charges <strong>2.9% + $0.30</strong> per transaction on Basic plan. No per-sale marketplace commission. Factor in your $39/month subscription divided by order volume plus marketing costs for true net margin.</p>
-          <a href="shopify-profit-margin-formula.html" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Shopify margin guide →</a>
+          <a href="shopify-profit-margin-formula" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Shopify margin guide →</a>
         </div>
         <div class="seo-platform-card">
           <h3>🟡 Walmart Marketplace Seller Fees</h3>
           <span class="fee-tag">6–15% referral, no monthly fee</span>
           <p style="margin-top:8px">Walmart charges a <strong>6–15% referral fee</strong> (averaging ~8%) with <strong>no monthly subscription</strong> unlike Amazon. No listing fees. Optional WFS (Walmart Fulfillment Services) fees apply if you use their warehousing.</p>
+          <a href="walmart-profit-calculator-guide" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Walmart fee guide →</a>
         </div>
         <div class="seo-platform-card">
           <h3>🔴 eBay Final Value Fee Calculator</h3>
@@ -604,22 +613,22 @@
     <section style="padding-bottom:80px">
       <div class="section-label">Learn more</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <a href="etsy-profit-margin-guide.html" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <a href="etsy-profit-margin-guide" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
           <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
           <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">How to Calculate Etsy Profit Margin</div>
           <div style="font-size:0.78rem;color:var(--muted-light)">Step-by-step formula with examples →</div>
         </a>
-        <a href="amazon-fba-profit-explained.html" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <a href="amazon-fba-profit-explained" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
           <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
           <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">Amazon FBA Profit Explained</div>
           <div style="font-size:0.78rem;color:var(--muted-light)">All fees, margins, and real examples →</div>
         </a>
-        <a href="shopify-profit-margin-formula.html" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <a href="shopify-profit-margin-formula" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
           <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
           <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">Shopify Profit Margin Formula</div>
           <div style="font-size:0.78rem;color:var(--muted-light)">Calculate Shopify margins correctly →</div>
         </a>
-        <a href="good-ecommerce-profit-margin.html" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        <a href="good-ecommerce-profit-margin" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
           <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
           <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">What is a Good Ecommerce Margin?</div>
           <div style="font-size:0.78rem;color:var(--muted-light)">Benchmarks by platform and niche →</div>
@@ -632,12 +641,12 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="etsy-profit-margin-guide.html">Blog</a>
+      <a href="about">About</a>
+      <a href="contact">Contact</a>
+      <a href="privacy-policy">Privacy Policy</a>
+      <a href="terms-and-conditions">Terms &amp; Conditions</a>
+      <a href="disclaimer">Disclaimer</a>
+      <a href="etsy-profit-margin-guide">Blog</a>
     </div>
     <p>© 2025 SellerProfitMargin.com · Free tool for ecommerce sellers · Not affiliated with Etsy, Shopify, Amazon, Walmart, eBay or TikTok</p>
     <p style="margin-top:6px;font-size:0.75rem">Affiliate disclosure: Some links on this site are affiliate links. We may earn a commission at no extra cost to you.</p>
