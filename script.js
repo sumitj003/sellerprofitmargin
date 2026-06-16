@@ -3,6 +3,19 @@
    Features: Scenario Compare, Export, Batch Calc, Break-Even Volume
    ============================================= */
 
+// ---- NAV DROPDOWN (Guides menu) ----
+function toggleNavDropdown(e) {
+  e.stopPropagation();
+  const dd = e.currentTarget.closest('.nav-dropdown');
+  document.querySelectorAll('.nav-dropdown').forEach(d => { if (d !== dd) d.classList.remove('open'); });
+  dd.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-dropdown')) {
+    document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+  }
+});
+
 // ---- CURRENCY ----
 const CURRENCIES = {
   USD: { symbol: '$',  rate: 1,     label: 'USD — US Dollar' },
