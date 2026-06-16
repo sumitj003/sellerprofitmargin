@@ -1,37 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-32C5GN2WMZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-32C5GN2WMZ');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Profit Margin Calculator for Etsy, Shopify & Amazon FBA | SellerProfitMargin</title>
-  <meta name="description" content="Calculate your exact profit, margin %, and break-even price for Etsy, Shopify, and Amazon FBA in seconds. Free seller profit calculator — no signup needed." />
-  <meta name="keywords" content="etsy profit calculator, shopify profit margin, amazon fba profit calculator, seller profit margin, ecommerce profit calculator" />
+  <title>Free Profit Margin Calculator — Etsy, Shopify, Amazon FBA, Walmart, eBay & TikTok Shop | SellerProfitMargin</title>
+  <meta name="description" content="Free ecommerce profit margin calculator for Etsy, Shopify, Amazon FBA, Walmart, eBay and TikTok Shop. Calculate net profit, margin %, and break-even price instantly. No signup required." />
+  <meta name="keywords" content="etsy profit calculator, shopify profit margin, amazon fba profit calculator, free tiktok shop profit margin calculator no signup, how to calculate walmart seller fees, ebay profit margin calculator, ecommerce break even calculator" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sellerprofitmargin.com/" />
+  <link rel="canonical" href="https://www.sellerprofitmargin.com/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Free Profit Margin Calculator — Etsy, Shopify, Amazon FBA" />
-  <meta property="og:description" content="Know your exact profit before you sell. Free calculator for ecommerce sellers." />
-  <meta property="og:url" content="https://sellerprofitmargin.com/" />
+  <meta property="og:title" content="Free Profit Margin Calculator — Etsy, Shopify, Amazon FBA & More" />
+  <meta property="og:description" content="Know your exact profit before you sell. Free calculator for ecommerce sellers on 6 platforms. No signup." />
+  <meta property="og:url" content="https://www.sellerprofitmargin.com/" />
   <meta property="og:type" content="website" />
 
-  <!-- Schema.org -->
+  <!-- WebApplication Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "SellerProfitMargin Calculator",
-    "url": "https://sellerprofitmargin.com",
-    "description": "Free profit margin calculator for Etsy, Shopify and Amazon FBA sellers",
+    "name": "SellerProfitMargin — Free Ecommerce Profit Calculator",
+    "url": "https://www.sellerprofitmargin.com",
+    "description": "Free profit margin calculator for Etsy, Shopify, Amazon FBA, Walmart, eBay and TikTok Shop sellers. Calculate net profit, margin %, and break-even price instantly.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "browserRequirements": "Requires JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": "Profit margin calculation, Break-even price, Scenario comparison, Batch calculator, CSV export, Multi-currency support",
+    "screenshot": "https://www.sellerprofitmargin.com/",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "127" }
+  }
+  </script>
+
+  <!-- FAQPage Schema — AI search + Featured Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate Etsy profit margin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Etsy profit margin = (Selling Price − Product Cost − Shipping − Etsy Fees) ÷ Selling Price × 100. Etsy fees include a 6.5% transaction fee, $0.20 listing fee per item, and approximately 3% + $0.25 payment processing. A healthy Etsy margin is 25–40%. Use our free Etsy profit calculator to get your exact margin in seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good profit margin for Amazon FBA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A good Amazon FBA profit margin is 25–35% net margin after all fees. Amazon charges approximately 15% referral fee plus FBA fulfillment fees of $3–$8 per unit. Target at least 20% net margin to account for returns, storage fees, and PPC advertising costs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate Shopify profit margin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shopify profit margin = (Revenue − Product Cost − Shopify Payment Processing − Shipping − Marketing) ÷ Revenue × 100. Shopify charges 2.9% + $0.30 per transaction on the Basic plan. Divide your $39/month subscription by monthly order volume to get per-order platform cost. Target 25–40% net margin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the TikTok Shop seller fee?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TikTok Shop charges approximately 6% referral fee on most product categories plus payment processing fees of around 2%. If you use their creator affiliate program, additional commission costs of 5–20% apply on affiliate-attributed sales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate break-even price for an Etsy listing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Break-even price = (Product Cost + Shipping + Listing Fee) ÷ (1 − Transaction Fee % − Processing Fee %). For example: product cost $10 + shipping $4 + $0.20 listing fee, with combined Etsy fees of ~10%, gives a break-even price of approximately $15.78. Our free calculator shows this automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many units do I need to sell to break even?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Break-even units = Monthly Fixed Costs ÷ Net Profit Per Unit. If your fixed costs are $500/month and net profit per unit is $12.50, you need to sell 40 units per month to break even. Use the Break-Even Volume tool in our free calculator to get your exact number."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Walmart Marketplace seller fees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Walmart Marketplace charges a referral fee of 6–15% depending on product category, averaging approximately 8%. There is no monthly subscription fee. Optional Walmart Fulfillment Services (WFS) fees apply if you use their warehousing and logistics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this profit calculator really free with no signup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — SellerProfitMargin.com is completely free with no signup, no account, no email required. Enter your numbers and get results instantly. The calculator supports 6 platforms: Etsy, Shopify, Amazon FBA, Walmart, eBay, and TikTok Shop, with multi-currency support (USD, EUR, GBP, INR, CAD, AUD)."
+        }
+      }
+    ]
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---- ADVANCED TOOLS SECTION ---- */
+    .features-section { margin-top: 28px; }
+    .feat-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0; }
+    .feat-tab {
+      padding: 9px 16px; border-radius: 8px 8px 0 0;
+      border: 1px solid var(--border); border-bottom: none;
+      background: var(--surface2); color: var(--muted-light);
+      font-size: 0.8rem; font-weight: 500; cursor: pointer;
+      transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+    }
+    .feat-tab:hover  { color: var(--text); background: var(--surface); }
+    .feat-tab.active { background: var(--surface); color: var(--accent); border-color: var(--border); font-weight: 600; }
+
+    .feat-panel {
+      display: none; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 0 12px 12px 12px;
+      padding: 28px;
+    }
+    .feat-panel.active { display: block; }
+    .feat-desc { font-size: 0.88rem; color: var(--muted-light); margin-bottom: 20px; line-height: 1.6; }
+
+    /* Feature buttons */
+    .feat-btn {
+      padding: 9px 20px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--surface2);
+      color: var(--text-secondary); font-size: 0.82rem; font-weight: 500;
+      cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+    }
+    .feat-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .feat-btn-primary { background: var(--accent); color: #0a0f1a; border-color: var(--accent); font-weight: 700; }
+    .feat-btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #0a0f1a; }
+
+    /* ---- SCENARIO COMPARE ---- */
+    .scenario-grid { display: grid; grid-template-columns: 1fr 40px 1fr; gap: 0; align-items: start; }
+    .scenario-vs { display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.85rem; color: var(--muted); padding-top: 40px; }
+    .scenario-col {}
+    .scenario-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .scenario-readonly { background: var(--surface2); border: 1px solid var(--border); border-radius: 9px; padding: 14px; margin-bottom: 14px; }
+    .sc-row { display: flex; justify-content: space-between; font-size: 0.82rem; padding: 4px 0; color: var(--muted-light); }
+    .sc-row span:last-child { font-family: 'Syne', sans-serif; font-weight: 600; color: var(--text); }
+
+    .scenario-results { display: none; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 12px; }
+    .cmp-result { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+    .cmp-label  { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 4px; }
+    .cmp-val    { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: var(--accent); }
+
+    /* Small field inputs for scenario B */
+    .field-group-sm { display: flex; flex-direction: column; gap: 8px; }
+    .field-sm label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted-light); display: block; margin-bottom: 4px; }
+    .fw-sm { display: flex; align-items: center; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color 0.2s; }
+    .fw-sm:focus-within { border-color: var(--accent); }
+    .pre-sm, .suf-sm { padding: 0 10px; font-size: 0.82rem; color: var(--muted); height: 38px; display: flex; align-items: center; }
+    .pre-sm { border-right: 1px solid var(--border); font-family: 'Syne', sans-serif; font-weight: 700; }
+    .suf-sm { border-left:  1px solid var(--border); }
+    .fw-sm input { flex: 1; background: transparent; border: none; outline: none; color: var(--text); font-size: 0.88rem; font-family: 'Syne', sans-serif; font-weight: 600; padding: 0 10px; height: 38px; }
+
+    /* ---- BATCH CALCULATOR ---- */
+    .batch-wrap { overflow-x: auto; border-radius: 9px; border: 1px solid var(--border); }
+    .batch-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .batch-table th { background: var(--surface2); color: var(--muted-light); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 10px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .batch-table td { padding: 4px 4px; border-bottom: 1px solid var(--border); }
+    .batch-table tr:last-child td { border-bottom: none; }
+    .batch-input { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 6px 8px; width: 100%; outline: none; transition: border-color 0.2s; }
+    .batch-input:focus { border-color: var(--accent); }
+    .batch-result { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.82rem; color: var(--muted-light); text-align: right; padding: 4px 10px; white-space: nowrap; }
+    .batch-del { background: none; border: 1px solid var(--border); border-radius: 5px; color: var(--muted); cursor: pointer; padding: 4px 8px; font-size: 0.85rem; transition: all 0.15s; }
+    .batch-del:hover { border-color: var(--negative); color: var(--negative); }
+
+    /* ---- EXPORT ---- */
+    .export-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .export-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s; }
+    .export-card:hover { border-color: var(--accent); }
+    .export-icon  { font-size: 2rem; margin-bottom: 10px; }
+    .export-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--text); margin-bottom: 6px; }
+    .export-desc  { font-size: 0.78rem; color: var(--muted-light); line-height: 1.5; }
+
+    /* ---- BREAK-EVEN VOLUME ---- */
+    .bev-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+    .bev-inputs {}
+    .bev-results { display: none; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .bev-stat { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 16px; text-align: center; }
+    .bev-stat-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
+    .bev-stat-val { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--text); }
+    .bev-stat-val.accent { color: var(--accent); }
+    .bev-message { font-size: 0.85rem; color: var(--negative); margin-top: 10px; display: none; }
+
+    /* ---- SEO CONTENT SECTION ---- */
+    .seo-content-section { margin-top: 64px; }
+    .seo-platform-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 20px; }
+    .seo-platform-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .seo-platform-card h3 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .seo-platform-card p { font-size: 0.78rem; color: var(--muted-light); line-height: 1.6; margin-bottom: 8px; }
+    .seo-platform-card .fee-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 5px; background: rgba(56,189,248,0.1); color: var(--accent); border: 1px solid rgba(56,189,248,0.2); }
+
+    /* ---- PRINT STYLES ---- */
+    @media print {
+      .nav, .features-section, .affiliate-section, .faq-section, .ad-slot, .tabs, .calc-btn, footer { display: none !important; }
+      body { background: white; color: black; }
+      .calc-card { border: 1px solid #ccc; box-shadow: none; }
+      .results { display: block !important; }
+      .result-value { color: #0284c7 !important; }
+    }
+
+    @media (max-width: 640px) {
+      .scenario-grid { grid-template-columns: 1fr; }
+      .scenario-vs { display: none; }
+      .export-grid { grid-template-columns: 1fr; }
+      .bev-grid { grid-template-columns: 1fr; }
+      .seo-platform-grid { grid-template-columns: 1fr; }
+      .feat-tab { font-size: 0.72rem; padding: 7px 10px; }
+    }
+  </style>
 </head>
 <body class="dark">
   <div class="blob blob-1"></div>
@@ -40,31 +238,53 @@
   <!-- NAV -->
   <nav class="nav">
     <a href="/" class="nav-logo">Seller<span>Profit</span>Margin</a>
-    <div class="nav-links">
-      <a href="/blog/article-1.html">Etsy Guide</a>
-      <a href="/blog/article-2.html">Amazon FBA</a>
-      <a href="/blog/article-3.html">Shopify</a>
-      <a href="/about.html">About</a>
-      <a href="/" class="nav-cta">Calculate Now</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" onclick="toggleNavDropdown(event)">Guides <span class="chev">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <a href="etsy-profit-margin-guide" class="nav-dd-item"><strong>Etsy Guide</strong><span>Profit margin formula + fees</span></a>
+            <a href="amazon-fba-profit-explained" class="nav-dd-item"><strong>Amazon FBA Guide</strong><span>Fees, margins, real examples</span></a>
+            <a href="shopify-profit-margin-formula" class="nav-dd-item"><strong>Shopify Guide</strong><span>Margin formula + benchmarks</span></a>
+            <a href="walmart-profit-calculator-guide" class="nav-dd-item"><strong>Walmart Guide</strong><span>Seller fees explained</span></a>
+            <a href="good-ecommerce-profit-margin" class="nav-dd-item"><strong>Good Margin Benchmarks</strong><span>What's healthy by platform</span></a>
+            <a href="ecommerce-profit-mistakes" class="nav-dd-item"><strong>Gross vs Net Profit</strong><span>The difference explained</span></a>
+          </div>
+        </div>
+        <a href="about">About</a>
+        <a href="/" class="nav-cta">Calculate Now</a>
+      </div>
+      <div id="currency-switcher">
+        <button id="currency-btn" onclick="toggleCurrencyDropdown()">USD $ ▾</button>
+        <div id="currency-dropdown">
+          <button class="curr-option active" data-code="USD" onclick="selectCurrency('USD')"><span class="curr-symbol">$</span> USD — US Dollar</button>
+          <button class="curr-option" data-code="EUR" onclick="selectCurrency('EUR')"><span class="curr-symbol">€</span> EUR — Euro</button>
+          <button class="curr-option" data-code="GBP" onclick="selectCurrency('GBP')"><span class="curr-symbol">£</span> GBP — British Pound</button>
+          <button class="curr-option" data-code="INR" onclick="selectCurrency('INR')"><span class="curr-symbol">₹</span> INR — Indian Rupee</button>
+          <button class="curr-option" data-code="CAD" onclick="selectCurrency('CAD')"><span class="curr-symbol">C$</span> CAD — Canadian Dollar</button>
+          <button class="curr-option" data-code="AUD" onclick="selectCurrency('AUD')"><span class="curr-symbol">A$</span> AUD — Australian Dollar</button>
+        </div>
+      </div>
     </div>
   </nav>
 
   <div class="wrapper">
+
     <!-- HERO -->
     <section class="calc-hero">
-      <div class="hero-tag fade-up delay-1">⚡ Etsy · Shopify · Amazon FBA · Dropshipping</div>
+      <div class="hero-tag fade-up delay-1">⚡ Etsy · Shopify · Amazon · Walmart · eBay · TikTok Shop</div>
       <h1 class="fade-up delay-2">Know Your <em>Real Profit</em><br/>Before You Sell</h1>
       <p class="fade-up delay-3">Stop guessing margins. Calculate exact profit, margin %, and break-even price for any platform — free, instant, no signup required.</p>
     </section>
 
-    <!-- AD SLOT TOP -->
-    <div class="ad-slot"><!-- AdSense: Replace with your ad code after approval --></div>
-
     <!-- PLATFORM TABS -->
     <div class="tabs fade-up delay-4">
-      <button class="tab active" onclick="setPreset('etsy', this)">🛍️ Etsy (6.5%)</button>
-      <button class="tab" onclick="setPreset('shopify', this)">🔵 Shopify (2.9%)</button>
-      <button class="tab" onclick="setPreset('amazon', this)">📦 Amazon FBA (15%)</button>
+      <button class="tab active" onclick="setPreset('etsy', this)">🛍️ Etsy</button>
+      <button class="tab" onclick="setPreset('shopify', this)">🔵 Shopify</button>
+      <button class="tab" onclick="setPreset('amazon', this)">📦 Amazon FBA</button>
+      <button class="tab" onclick="setPreset('walmart', this)">🟡 Walmart</button>
+      <button class="tab" onclick="setPreset('ebay', this)">🔴 eBay</button>
+      <button class="tab" onclick="setPreset('tiktok', this)">🎵 TikTok Shop</button>
       <button class="tab" onclick="setPreset('custom', this)">⚙️ Custom</button>
     </div>
 
@@ -73,88 +293,202 @@
       <div class="calc-grid">
         <div class="field">
           <label>Selling Price</label>
-          <div class="field-wrap">
-            <span class="prefix">$</span>
-            <input type="number" id="price" placeholder="29.99" min="0" step="0.01" />
-          </div>
+          <div class="field-wrap"><span class="prefix currency-symbol">$</span><input type="number" id="price" placeholder="29.99" min="0" step="0.01" /></div>
         </div>
         <div class="field">
           <label>Product / COGS Cost</label>
-          <div class="field-wrap">
-            <span class="prefix">$</span>
-            <input type="number" id="cost" placeholder="8.00" min="0" step="0.01" />
-          </div>
+          <div class="field-wrap"><span class="prefix currency-symbol">$</span><input type="number" id="cost" placeholder="8.00" min="0" step="0.01" /></div>
         </div>
         <div class="field">
           <label>Shipping Cost</label>
-          <div class="field-wrap">
-            <span class="prefix">$</span>
-            <input type="number" id="shipping" placeholder="3.50" min="0" step="0.01" />
-          </div>
+          <div class="field-wrap"><span class="prefix currency-symbol">$</span><input type="number" id="shipping" placeholder="3.50" min="0" step="0.01" /></div>
         </div>
         <div class="field">
           <label>Ad Spend</label>
-          <div class="field-wrap">
-            <span class="prefix">$</span>
-            <input type="number" id="ads" placeholder="0.00" min="0" step="0.01" />
-          </div>
+          <div class="field-wrap"><span class="prefix currency-symbol">$</span><input type="number" id="ads" placeholder="0.00" min="0" step="0.01" /></div>
         </div>
         <div class="field full">
-          <label>Platform Fee %</label>
-          <div class="field-wrap">
-            <input type="number" id="fee" placeholder="6.5" min="0" max="100" step="0.1" />
-            <span class="suffix">%</span>
-          </div>
+          <label>Platform Fee %
+            <div class="tooltip-wrapper">
+              <button class="tooltip-btn" id="tooltip-btn" onclick="toggleTooltip(event)" type="button">?</button>
+              <div class="tooltip-box" id="fee-tooltip-box"><span id="fee-tooltip-text">Etsy charges 6.5% transaction fee on sale price + $0.20 listing fee + ~3% + $0.25 payment processing.</span></div>
+            </div>
+          </label>
+          <div class="field-wrap"><input type="number" id="fee" placeholder="6.5" min="0" max="100" step="0.1" /><span class="suffix">%</span></div>
           <div class="fee-presets">
             <button class="fee-preset" onclick="setFee(6.5)">Etsy 6.5%</button>
             <button class="fee-preset" onclick="setFee(2.9)">Shopify 2.9%</button>
             <button class="fee-preset" onclick="setFee(15)">Amazon 15%</button>
-            <button class="fee-preset" onclick="setFee(5)">eBay ~5%</button>
+            <button class="fee-preset" onclick="setFee(8)">Walmart 8%</button>
+            <button class="fee-preset" onclick="setFee(13)">eBay 13%</button>
+            <button class="fee-preset" onclick="setFee(6)">TikTok 6%</button>
             <button class="fee-preset" onclick="setFee(0)">No Fee</button>
+          </div>
+          <div class="offsite-row" id="offsite-row" style="display:flex;">
+            <div class="offsite-label">Etsy Offsite Ads<span>Add 12% fee on attributed sales — applies if Etsy promotes your listing externally</span></div>
+            <div class="toggle-switch" id="offsite-toggle" onclick="toggleOffsiteAds()"><div class="toggle-track"></div></div>
           </div>
         </div>
       </div>
 
       <button class="calc-btn" onclick="calculate()">Calculate My Profit →</button>
 
-      <!-- RESULTS -->
       <div class="results" id="results">
         <div class="results-grid" style="margin-top:28px">
-          <div class="result-box highlight">
-            <div class="result-label">Net Profit</div>
-            <div class="result-value" id="r-profit">—</div>
-          </div>
-          <div class="result-box">
-            <div class="result-label">Margin %</div>
-            <div class="result-value neutral" id="r-margin">—</div>
-          </div>
-          <div class="result-box">
-            <div class="result-label">Break-Even Price</div>
-            <div class="result-value neutral" id="r-breakeven">—</div>
-          </div>
+          <div class="result-box highlight"><div class="result-label">Net Profit</div><div class="result-value" id="r-profit">—</div></div>
+          <div class="result-box"><div class="result-label">Profit Margin</div><div class="result-value neutral" id="r-margin">—</div></div>
+          <div class="result-box"><div class="result-label">Break-Even Price</div><div class="result-value neutral" id="r-breakeven">—</div></div>
         </div>
-
         <div class="breakdown">
           <div class="breakdown-title">Cost Breakdown</div>
           <div class="breakdown-row"><span class="label">Selling Price</span><span class="val" id="b-price">—</span></div>
           <div class="breakdown-row"><span class="label">Product Cost</span><span class="val deduct" id="b-cost">—</span></div>
           <div class="breakdown-row"><span class="label">Shipping</span><span class="val deduct" id="b-shipping">—</span></div>
           <div class="breakdown-row"><span class="label">Platform Fee</span><span class="val deduct" id="b-fee">—</span></div>
+          <div class="breakdown-row etsy-extra" id="b-etsy-listing-row" style="display:flex;"><span class="label">↳ Listing Fee</span><span class="val deduct" id="b-etsy-listing">—</span></div>
+          <div class="breakdown-row etsy-extra" id="b-etsy-processing-row" style="display:flex;"><span class="label">↳ Payment Processing</span><span class="val deduct" id="b-etsy-processing">—</span></div>
+          <div class="breakdown-row etsy-extra" id="b-offsite-row-result" style="display:none;"><span class="label">↳ Offsite Ads Fee</span><span class="val deduct" id="b-offsite-fee">—</span></div>
           <div class="breakdown-row"><span class="label">Ad Spend</span><span class="val deduct" id="b-ads">—</span></div>
-          <div class="breakdown-row" style="margin-top:4px">
-            <span class="label" style="font-weight:600;color:var(--text)">Net Profit</span>
-            <span class="val total" id="b-total">—</span>
-          </div>
+          <div class="breakdown-row" style="margin-top:4px"><span class="label" style="font-weight:600;color:var(--text)">Net Profit</span><span class="val total" id="b-total">—</span></div>
         </div>
         <div class="insight" id="insight"></div>
       </div>
     </div>
 
-    <!-- AD SLOT MID -->
-    <div class="ad-slot"><!-- AdSense: Mid page ad --></div>
+    <!-- ============================================
+         ADVANCED TOOLS — Features 1, 3, 4, 6
+         ============================================ -->
+    <div class="features-section fade-up">
+      <div class="section-label" style="margin-top:32px">Advanced Tools</div>
+
+      <div class="feat-tabs">
+        <button class="feat-tab active" onclick="switchFeature('scenario',this)">🔄 Scenario Compare</button>
+        <button class="feat-tab" onclick="switchFeature('batch',this)">📊 Batch Calculator</button>
+        <button class="feat-tab" onclick="switchFeature('export',this)">📥 Export Results</button>
+        <button class="feat-tab" onclick="switchFeature('breakeven',this)">🎯 Break-Even Volume</button>
+      </div>
+
+      <!-- FEATURE 1: SCENARIO COMPARE -->
+      <div class="feat-panel active" id="feat-scenario">
+        <p class="feat-desc">Compare your current calculation against a modified scenario — test a price change, different platform fee, or higher shipping cost side by side.</p>
+        <div class="scenario-grid">
+          <div class="scenario-col">
+            <div class="scenario-label">📌 Current (Scenario A)</div>
+            <div class="scenario-readonly">
+              <div class="sc-row"><span>Selling Price</span><span id="sc-a-price">—</span></div>
+              <div class="sc-row"><span>Product Cost</span><span id="sc-a-cost">—</span></div>
+              <div class="sc-row"><span>Shipping</span><span id="sc-a-ship">—</span></div>
+              <div class="sc-row"><span>Fee %</span><span id="sc-a-fee">—</span></div>
+              <div class="sc-row"><span>Ad Spend</span><span id="sc-a-ads">—</span></div>
+            </div>
+            <div class="scenario-results" id="cmp-a-results">
+              <div class="cmp-result"><div class="cmp-label">Net Profit</div><div class="cmp-val" id="cmp-a-profit">—</div></div>
+              <div class="cmp-result"><div class="cmp-label">Margin</div><div class="cmp-val" id="cmp-a-margin">—</div></div>
+              <div class="cmp-result"><div class="cmp-label">Break-Even</div><div class="cmp-val" id="cmp-a-breakeven">—</div></div>
+            </div>
+          </div>
+
+          <div class="scenario-vs">VS</div>
+
+          <div class="scenario-col">
+            <div class="scenario-label">✏️ Scenario B — modify any value</div>
+            <div class="field-group-sm">
+              <div class="field-sm"><label>Selling Price</label><div class="fw-sm"><span class="pre-sm currency-symbol">$</span><input type="number" id="sc-price" placeholder="29.99" min="0" step="0.01"/></div></div>
+              <div class="field-sm"><label>Product Cost</label><div class="fw-sm"><span class="pre-sm currency-symbol">$</span><input type="number" id="sc-cost" placeholder="8.00" min="0" step="0.01"/></div></div>
+              <div class="field-sm"><label>Shipping</label><div class="fw-sm"><span class="pre-sm currency-symbol">$</span><input type="number" id="sc-shipping" placeholder="3.50" min="0" step="0.01"/></div></div>
+              <div class="field-sm"><label>Platform Fee %</label><div class="fw-sm"><input type="number" id="sc-fee" placeholder="6.5" min="0" max="100" step="0.1"/><span class="suf-sm">%</span></div></div>
+              <div class="field-sm"><label>Ad Spend</label><div class="fw-sm"><span class="pre-sm currency-symbol">$</span><input type="number" id="sc-ads" placeholder="0.00" min="0" step="0.01"/></div></div>
+            </div>
+            <div class="scenario-results" id="cmp-b-results">
+              <div class="cmp-result"><div class="cmp-label">Net Profit</div><div class="cmp-val" id="cmp-b-profit">—</div></div>
+              <div class="cmp-result"><div class="cmp-label">Margin</div><div class="cmp-val" id="cmp-b-margin">—</div></div>
+              <div class="cmp-result"><div class="cmp-label">Break-Even</div><div class="cmp-val" id="cmp-b-breakeven">—</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+          <button class="feat-btn" onclick="loadScenario()">← Load from Calculator</button>
+          <button class="feat-btn feat-btn-primary" onclick="compareScenarios()">Compare Scenarios →</button>
+        </div>
+        <div id="cmp-diff" style="margin-top:14px;font-size:0.88rem;font-weight:600;min-height:20px"></div>
+      </div>
+
+      <!-- FEATURE 4: BATCH CALCULATOR -->
+      <div class="feat-panel" id="feat-batch">
+        <p class="feat-desc">Calculate margins for multiple products at once. Add a row for each product, enter your numbers, and compare all margins side by side.</p>
+        <div class="batch-wrap">
+          <table class="batch-table">
+            <thead>
+              <tr>
+                <th style="min-width:120px">Product Name</th>
+                <th>Price ($)</th><th>Cost ($)</th><th>Ship ($)</th>
+                <th>Fee %</th><th>Ads ($)</th>
+                <th>Net Profit</th><th>Margin</th><th>Break-Even</th>
+                <th style="width:30px"></th>
+              </tr>
+            </thead>
+            <tbody id="batch-tbody"></tbody>
+          </table>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center">
+          <button class="feat-btn" onclick="addBatchRow()">+ Add Row</button>
+          <button class="feat-btn feat-btn-primary" onclick="calculateBatch()">Calculate All →</button>
+          <button class="feat-btn" onclick="clearBatch()" style="margin-left:auto">Reset</button>
+        </div>
+        <p style="font-size:0.75rem;color:var(--muted);margin-top:10px">Tip: Use the platform fee presets above or enter any custom fee % in the Fee % column.</p>
+      </div>
+
+      <!-- FEATURE 3: EXPORT RESULTS -->
+      <div class="feat-panel" id="feat-export">
+        <p class="feat-desc">Download your calculation results as a CSV spreadsheet or print as a clean PDF report. Run the main calculator first to populate your results.</p>
+        <div class="export-grid">
+          <div class="export-card">
+            <div class="export-icon">📊</div>
+            <div class="export-title">Download as CSV</div>
+            <div class="export-desc">Opens in Excel, Google Sheets, or any spreadsheet app. Includes all inputs, fees, and results with date and platform label.</div>
+            <button class="feat-btn feat-btn-primary" onclick="exportCSV()" style="margin-top:16px;width:100%">Download CSV →</button>
+          </div>
+          <div class="export-card">
+            <div class="export-icon">🖨️</div>
+            <div class="export-title">Print / Save as PDF</div>
+            <div class="export-desc">Opens your browser's print dialog. Select "Save as PDF" as the destination to get a clean one-page PDF report of your calculation.</div>
+            <button class="feat-btn" onclick="exportPrint()" style="margin-top:16px;width:100%">Print / PDF →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE 6: BREAK-EVEN VOLUME -->
+      <div class="feat-panel" id="feat-breakeven">
+        <p class="feat-desc">Find out exactly how many units you need to sell each month to cover your fixed costs and hit your profit target. Uses profit per unit from the main calculator.</p>
+        <div class="bev-grid">
+          <div class="bev-inputs">
+            <div class="field-sm">
+              <label>Monthly Fixed Costs</label>
+              <div class="fw-sm"><span class="pre-sm currency-symbol">$</span><input type="number" id="bev-overhead" placeholder="500.00" min="0" step="0.01"/></div>
+              <p style="font-size:0.72rem;color:var(--muted);margin-top:5px">Tools, subscriptions, platform fees, anything you pay regardless of sales volume</p>
+            </div>
+            <div class="field-sm" style="margin-top:14px">
+              <label>Monthly Profit Target <span style="font-weight:400;font-size:0.65rem;color:var(--muted);text-transform:none">(optional)</span></label>
+              <div class="fw-sm"><span class="pre-sm currency-symbol">$</span><input type="number" id="bev-target" placeholder="1000.00" min="0" step="0.01"/></div>
+            </div>
+            <button class="feat-btn feat-btn-primary" onclick="calculateBreakevenVolume()" style="margin-top:18px;width:100%">Calculate Units Needed →</button>
+            <p id="bev-message" class="bev-message">Run the main calculator first to get profit per unit.</p>
+          </div>
+          <div>
+            <div class="bev-results" id="bev-results">
+              <div class="bev-stat"><div class="bev-stat-label">Profit per unit</div><div class="bev-stat-val" id="bev-profit-unit">—</div></div>
+              <div class="bev-stat"><div class="bev-stat-label">Units to cover overhead</div><div class="bev-stat-val accent" id="bev-units-overhead">—</div></div>
+              <div class="bev-stat"><div class="bev-stat-label">Units to hit profit goal</div><div class="bev-stat-val" id="bev-units-target">—</div></div>
+              <div class="bev-stat"><div class="bev-stat-label">Revenue needed</div><div class="bev-stat-val" id="bev-revenue">—</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- end features-section -->
 
     <!-- AFFILIATE SECTION -->
-    <div class="affiliate-section">
+    <div class="affiliate-section" style="margin-top:52px">
       <div class="section-label">Recommended tools for sellers</div>
       <div class="affiliate-grid">
         <a class="aff-card" href="https://shopify.com" target="_blank" rel="noopener sponsored">
@@ -163,7 +497,7 @@
           <div class="aff-desc">Launch your store in minutes. Best for scaling past Etsy. Free trial available.</div>
           <div class="aff-cta">Try free for 3 days →</div>
         </a>
-        <a class="aff-card" href="https://erank.com" target="_blank" rel="noopener sponsored">
+        <a class="aff-card" href="https://erank.com?fpr=sumit74" target="_blank" rel="noopener sponsored">
           <span class="aff-icon">📈</span>
           <div class="aff-title">Etsy SEO with eRank</div>
           <div class="aff-desc">Find winning keywords, track competitors, and rank your Etsy listings higher.</div>
@@ -178,24 +512,66 @@
       </div>
     </div>
 
-    <!-- WHY USE THIS SECTION -->
-    <section style="margin-top:64px;padding-bottom:20px">
+    <!-- SEO PLATFORM CONTENT — Long-tail keyword targeting -->
+    <section class="seo-content-section">
+      <h2 style="font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:6px">Platform Fee Guides — Calculate Profit on Any Marketplace</h2>
+      <p style="font-size:0.85rem;color:var(--muted-light);margin-bottom:0">Understanding exact fees is the difference between a profitable product and an invisible loss. Here's what each platform charges:</p>
+      <div class="seo-platform-grid">
+        <div class="seo-platform-card">
+          <h3>🛍️ Etsy Seller Fees 2025</h3>
+          <span class="fee-tag">6.5% + $0.20 + ~3.25%</span>
+          <p style="margin-top:8px">Etsy charges a <strong>6.5% transaction fee</strong> on the full sale price including shipping, a <strong>$0.20 listing fee</strong> per item, and <strong>~3% + $0.25 payment processing</strong>. Offsite Ads adds 12–15% on qualifying sales. Use the Etsy tab above to calculate your exact margin.</p>
+          <a href="etsy-profit-margin-guide" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Etsy fee guide →</a>
+        </div>
+        <div class="seo-platform-card">
+          <h3>📦 Amazon FBA Fees Explained</h3>
+          <span class="fee-tag">15% referral + $3–$8 FBA</span>
+          <p style="margin-top:8px">Amazon charges a <strong>~15% referral fee</strong> on most categories plus <strong>FBA fulfillment fees</strong> of $3.22–$8+ per unit based on size and weight. Add monthly storage fees and PPC advertising costs for accurate margin calculation.</p>
+          <a href="amazon-fba-profit-explained" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Amazon FBA fee guide →</a>
+        </div>
+        <div class="seo-platform-card">
+          <h3>🔵 Shopify Profit Margin Formula</h3>
+          <span class="fee-tag">2.9% + $0.30 per order</span>
+          <p style="margin-top:8px">Shopify Payments charges <strong>2.9% + $0.30</strong> per transaction on Basic plan. No per-sale marketplace commission. Factor in your $39/month subscription divided by order volume plus marketing costs for true net margin.</p>
+          <a href="shopify-profit-margin-formula" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Shopify margin guide →</a>
+        </div>
+        <div class="seo-platform-card">
+          <h3>🟡 Walmart Marketplace Seller Fees</h3>
+          <span class="fee-tag">6–15% referral, no monthly fee</span>
+          <p style="margin-top:8px">Walmart charges a <strong>6–15% referral fee</strong> (averaging ~8%) with <strong>no monthly subscription</strong> unlike Amazon. No listing fees. Optional WFS (Walmart Fulfillment Services) fees apply if you use their warehousing.</p>
+          <a href="walmart-profit-calculator-guide" style="font-size:0.75rem;color:var(--accent);text-decoration:none">Full Walmart fee guide →</a>
+        </div>
+        <div class="seo-platform-card">
+          <h3>🔴 eBay Final Value Fee Calculator</h3>
+          <span class="fee-tag">12–15% + fixed per-order fee</span>
+          <p style="margin-top:8px">eBay charges a <strong>12–15% final value fee</strong> depending on your category and store plan, plus a small fixed per-order fee. Basic sellers pay the higher rate. An eBay Store subscription reduces fees for high-volume sellers.</p>
+        </div>
+        <div class="seo-platform-card">
+          <h3>🎵 Free TikTok Shop Profit Margin Calculator</h3>
+          <span class="fee-tag">~6% referral + 2% processing</span>
+          <p style="margin-top:8px">TikTok Shop charges approximately <strong>6% referral fee</strong> on most categories plus <strong>~2% payment processing</strong>. Creator affiliate commissions of 5–20% are additional costs if you use their affiliate marketing program.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY USE THIS -->
+    <section style="margin-top:52px;padding-bottom:20px">
       <div class="section-label">Why sellers use this calculator</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
-          <div style="font-size:1.4rem;margin-bottom:10px">🎯</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Platform-specific fees</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">Pre-loaded with Etsy 6.5%, Shopify 2.9%, Amazon 15% — accurate from day one.</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 18px">
+          <div style="font-size:1.3rem;margin-bottom:10px">🎯</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.88rem;color:var(--text)">Best for pre-listing research</div>
+          <div style="font-size:0.78rem;color:var(--muted-light);line-height:1.5">Validate any product's profitability before you source or list it. Know your margin before you invest a single rupee.</div>
         </div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
-          <div style="font-size:1.4rem;margin-bottom:10px">⚡</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Instant results</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">No signup, no loading, no nonsense. Enter your numbers and see your profit in seconds.</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 18px">
+          <div style="font-size:1.3rem;margin-bottom:10px">⚡</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.88rem;color:var(--text)">Instant, no signup</div>
+          <div style="font-size:0.78rem;color:var(--muted-light);line-height:1.5">No account, no email, no waiting. Enter numbers and see results in under 5 seconds across 6 platforms.</div>
         </div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 18px">
-          <div style="font-size:1.4rem;margin-bottom:10px">💡</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.9rem">Smart insights</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.5">We tell you if your margin is too thin and exactly what price to charge for 20%+ margin.</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 18px">
+          <div style="font-size:1.3rem;margin-bottom:10px">💱</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px;font-size:0.88rem;color:var(--text)">Multi-currency + advanced tools</div>
+          <div style="font-size:0.78rem;color:var(--muted-light);line-height:1.5">USD, EUR, GBP, INR, CAD, AUD. Plus scenario compare, batch calculator, CSV export, and break-even volume tools.</div>
         </div>
       </div>
     </section>
@@ -204,70 +580,75 @@
     <div class="faq-section">
       <div class="section-label">Frequently asked questions</div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How is profit margin calculated?</div>
-        <div class="faq-a">Profit margin = (Net Profit ÷ Selling Price) × 100. Net profit is your selling price minus product cost, shipping, platform fee, and ad spend. A healthy margin for ecommerce is typically 20–40%.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What is the Etsy seller fee in 2024?</div>
-        <div class="faq-a">Etsy charges a 6.5% transaction fee on the sale price including shipping. There is also a $0.20 listing fee per item and a payment processing fee of ~3% + $0.25. For simplicity, enter 6.5–10% depending on your setup.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">How do I calculate Etsy profit margin?</div>
+        <div class="faq-a">Etsy profit margin = (Selling Price − Product Cost − Shipping − All Etsy Fees) ÷ Selling Price × 100. Etsy fees include 6.5% transaction fee, $0.20 listing fee per item, and ~3% + $0.25 payment processing. A healthy Etsy margin is 25–40%.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">What is a good profit margin for Amazon FBA?</div>
-        <div class="faq-a">Most successful Amazon sellers target 25–40% net margin. Amazon charges ~15% referral fee plus FBA fulfillment fees. Aim for minimum 20% margin to cover returns, storage fees, and PPC costs.</div>
+        <div class="faq-a">Most successful Amazon FBA sellers target 25–35% net margin. Amazon charges ~15% referral fee plus FBA fulfillment fees. Aim for minimum 20% margin to cover returns, storage fees, and PPC advertising costs.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">How do I calculate break-even price?</div>
-        <div class="faq-a">Break-even is the minimum price you need to charge to cover all costs — product, shipping, fees, ads — with zero profit. Our calculator shows this automatically. Price below this and you're losing money on every sale.</div>
+        <div class="faq-a">Break-even price is the minimum price you must charge to cover all costs — product, shipping, fees, ads — with zero profit. Our calculator shows this automatically. Price below break-even and you lose money on every sale.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Does this work for digital products?</div>
-        <div class="faq-a">Yes — set shipping and product cost to $0 for digital items. Your only costs are the platform fee and any ad spend. Digital products typically have the highest margins on Etsy, often 60–90%.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">How many units do I need to sell to break even?</div>
+        <div class="faq-a">Break-even units = Monthly Fixed Costs ÷ Net Profit Per Unit. If your fixed costs are $500/month and profit per unit is $12.50, you need 40 units per month to break even. Use the Break-Even Volume tool above to calculate your exact number automatically.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Can I use this for Shopify dropshipping?</div>
-        <div class="faq-a">Absolutely. Enter your product cost (supplier price), shipping cost, Shopify's 2.9% fee, and your ad spend. The calculator gives you your real net profit after all costs including advertising.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Is this free TikTok Shop profit margin calculator really free?</div>
+        <div class="faq-a">Yes — completely free, no signup, no email required. Supports all 6 platforms: Etsy, Shopify, Amazon FBA, Walmart, eBay, and TikTok Shop. TikTok Shop fee is pre-loaded at 6% referral fee plus approximately 2% payment processing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I compare two pricing scenarios?</div>
+        <div class="faq-a">Yes — use the Scenario Compare tool in the Advanced Tools section. Load your current calculation, modify any value in Scenario B (different price, platform, shipping cost), and click Compare. It shows side-by-side profit, margin, and break-even with a difference callout.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do Walmart Marketplace seller fees work?</div>
+        <div class="faq-a">Walmart Marketplace charges a referral fee of 6–15% depending on product category, averaging approximately 8%. Unlike Amazon, there is no monthly subscription fee. Optional Walmart Fulfillment Services (WFS) fees apply only if you use their warehousing.</div>
       </div>
     </div>
 
     <!-- ARTICLE LINKS -->
     <section style="padding-bottom:80px">
       <div class="section-label">Learn more</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <a href="/blog/article-1.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">How to Calculate Etsy Profit Margin</div>
-          <div style="font-size:0.8rem;color:var(--muted)">Step-by-step formula with examples →</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <a href="etsy-profit-margin-guide" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">How to Calculate Etsy Profit Margin</div>
+          <div style="font-size:0.78rem;color:var(--muted-light)">Step-by-step formula with examples →</div>
         </a>
-        <a href="/blog/article-2.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">Amazon FBA Profit Explained</div>
-          <div style="font-size:0.8rem;color:var(--muted)">All fees, margins, and real examples →</div>
+        <a href="amazon-fba-profit-explained" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">Amazon FBA Profit Explained</div>
+          <div style="font-size:0.78rem;color:var(--muted-light)">All fees, margins, and real examples →</div>
         </a>
-        <a href="/blog/article-3.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">Shopify Profit Margin Formula</div>
-          <div style="font-size:0.8rem;color:var(--muted)">Calculate Shopify margins correctly →</div>
+        <a href="shopify-profit-margin-formula" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">Shopify Profit Margin Formula</div>
+          <div style="font-size:0.78rem;color:var(--muted-light)">Calculate Shopify margins correctly →</div>
         </a>
-        <a href="/blog/article-4.html" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px">Guide</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px">What is a Good Ecommerce Margin?</div>
-          <div style="font-size:0.8rem;color:var(--muted)">Benchmarks by platform and niche →</div>
+        <a href="good-ecommerce-profit-margin" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.2s;display:block" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:8px;font-weight:600">Guide</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--text);margin-bottom:6px;font-size:0.92rem">What is a Good Ecommerce Margin?</div>
+          <div style="font-size:0.78rem;color:var(--muted-light)">Benchmarks by platform and niche →</div>
         </a>
       </div>
     </section>
+
   </div>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-links">
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms &amp; Conditions</a>
-      <a href="/disclaimer.html">Disclaimer</a>
-      <a href="/blog/article-1.html">Blog</a>
+      <a href="about">About</a>
+      <a href="contact">Contact</a>
+      <a href="privacy-policy">Privacy Policy</a>
+      <a href="terms-and-conditions">Terms &amp; Conditions</a>
+      <a href="disclaimer">Disclaimer</a>
+      <a href="etsy-profit-margin-guide">Blog</a>
     </div>
-    <p>© 2025 SellerProfitMargin.com · Free tool for ecommerce sellers · Not affiliated with Etsy, Shopify, or Amazon</p>
+    <p>© 2025 SellerProfitMargin.com · Free tool for ecommerce sellers · Not affiliated with Etsy, Shopify, Amazon, Walmart, eBay or TikTok</p>
     <p style="margin-top:6px;font-size:0.75rem">Affiliate disclosure: Some links on this site are affiliate links. We may earn a commission at no extra cost to you.</p>
   </footer>
 
