@@ -6,7 +6,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-32C5GN2WMZ');
 </script>
   <meta charset="UTF-8" />
@@ -24,12 +23,22 @@
 
   <nav class="nav">
     <a href="/" class="nav-logo">Seller<span>Profit</span>Margin</a>
-    <div class="nav-links">
-      <a href="/blog/article-1.html">Etsy Guide</a>
-      <a href="/blog/article-2.html">Amazon FBA</a>
-      <a href="/blog/article-3.html">Shopify</a>
-      <a href="/about.html">About</a>
-      <a href="/" class="nav-cta">Calculate Now</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" onclick="toggleNavDropdown(event)">Guides <span class="chev">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <a href="etsy-profit-margin-guide.html" class="nav-dd-item"><strong>Etsy Guide</strong><span>Profit margin formula + fees</span></a>
+            <a href="amazon-fba-profit-explained.html" class="nav-dd-item"><strong>Amazon FBA Guide</strong><span>Fees, margins, real examples</span></a>
+            <a href="shopify-profit-margin-formula.html" class="nav-dd-item"><strong>Shopify Guide</strong><span>Margin formula + benchmarks</span></a>
+            <a href="walmart-profit-calculator-guide.html" class="nav-dd-item"><strong>Walmart Guide</strong><span>Seller fees explained</span></a>
+            <a href="good-ecommerce-profit-margin.html" class="nav-dd-item"><strong>Good Margin Benchmarks</strong><span>What's healthy by platform</span></a>
+            <a href="ecommerce-profit-mistakes.html" class="nav-dd-item"><strong>Gross vs Net Profit</strong><span>The difference explained</span></a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="/" class="nav-cta">Calculate Now</a>
+      </div>
     </div>
   </nav>
 
@@ -94,11 +103,11 @@
 
   <footer class="footer">
     <div class="footer-links">
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms &amp; Conditions</a>
-      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </div>
     <p>© 2025 SellerProfitMargin.com · Free tool for ecommerce sellers</p>
   </footer>
