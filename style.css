@@ -79,6 +79,45 @@ body.dark  .nav-links a:hover { color: var(--text); }
 body.light .nav-links a       { color: var(--article-muted); }
 body.light .nav-links a:hover { color: var(--article-heading); }
 
+/* ===================== NAV DROPDOWN (Guides/Blog folder) ===================== */
+.nav-dropdown { position: relative; }
+.nav-dropdown-btn {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.875rem; font-weight: 500;
+  background: none; border: none; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; padding: 0; transition: color 0.2s;
+}
+body.dark  .nav-dropdown-btn       { color: var(--muted-light); }
+body.dark  .nav-dropdown-btn:hover { color: var(--text); }
+body.light .nav-dropdown-btn       { color: var(--article-muted); }
+body.light .nav-dropdown-btn:hover { color: var(--article-heading); }
+.nav-dropdown-btn .chev { font-size: 10px; transition: transform 0.2s; }
+.nav-dropdown.open .nav-dropdown-btn .chev { transform: rotate(180deg); }
+
+.nav-dropdown-menu {
+  display: none; position: absolute; top: calc(100% + 14px); left: 50%;
+  transform: translateX(-50%);
+  min-width: 260px; border-radius: 12px; overflow: hidden;
+  z-index: 200; box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+body.dark  .nav-dropdown-menu { background: var(--surface); border: 1px solid var(--border); }
+body.light .nav-dropdown-menu { background: #fff; border: 1px solid var(--article-border); }
+.nav-dropdown.open .nav-dropdown-menu { display: block; }
+
+.nav-dd-item {
+  display: block; padding: 11px 16px; text-decoration: none;
+  font-size: 0.82rem; transition: all 0.15s; border-bottom: 1px solid;
+}
+.nav-dd-item:last-child { border-bottom: none; }
+body.dark  .nav-dd-item { color: var(--muted-light); border-color: var(--border); }
+body.dark  .nav-dd-item:hover { background: var(--surface2); color: var(--text); }
+body.light .nav-dd-item { color: var(--article-muted); border-color: var(--article-border); }
+body.light .nav-dd-item:hover { background: #f8fafc; color: var(--article-heading); }
+.nav-dd-item strong { display: block; font-weight: 600; margin-bottom: 1px; }
+body.dark  .nav-dd-item strong { color: var(--text); }
+body.light .nav-dd-item strong { color: var(--article-heading); }
+.nav-dd-item span { font-size: 0.72rem; opacity: 0.75; }
+
 .nav-cta {
   padding: 8px 20px; border-radius: 8px; font-size: 0.82rem; font-weight: 600;
   text-decoration: none; transition: all 0.2s; white-space: nowrap; letter-spacing: 0.01em;
