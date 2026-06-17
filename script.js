@@ -3,6 +3,13 @@
    Features: Scenario Compare, Export, Batch Calc, Break-Even Volume
    ============================================= */
 
+// ---- GA4 EVENT TRACKING ----
+function trackEvent(eventName, params) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, params || {});
+  }
+}
+
 // ---- NAV DROPDOWN (Guides menu) ----
 function toggleNavDropdown(e) {
   e.stopPropagation();
@@ -169,6 +176,8 @@ function calculate() {
     ins.innerHTML = `<span class="insight-icon">✅</span><span>Solid margin of <strong>${margin.toFixed(1)}%</strong>. You pocket <strong>${fmt(profit)}</strong> per sale.</span>`;
   }
 
+  trackEvent('calculate_profit', { platform: activePreset, currency: currentCurrency, margin_bucket: margin < 15 ? 'low' : margin < 30 ? 'mid' : 'high' });
+
   document.getElementById('results').className = 'results show';
   document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
@@ -205,6 +214,7 @@ function loadScenario() {
 }
 
 function compareScenarios() {
+  trackEvent('scenario_compare_used', {});
   const calcOne = (price, cost, shipping, fee, ads) => {
     const feeAmt = (price * fee) / 100;
     const profit  = price - cost - shipping - feeAmt - ads;
@@ -247,6 +257,7 @@ function compareScenarios() {
 // FEATURE 3: EXPORT
 // ============================================
 function exportCSV() {
+  trackEvent('export_csv', { platform: activePreset });
   const profit = document.getElementById('r-profit')?.textContent;
   if (!profit || profit === '—') { alert('Please run the main calculator first.'); return; }
 
@@ -276,6 +287,7 @@ function exportCSV() {
 }
 
 function exportPrint() {
+  trackEvent('export_print', { platform: activePreset });
   const profit = document.getElementById('r-profit')?.textContent;
   if (!profit || profit === '—') { alert('Please run the main calculator first.'); return; }
   window.print();
@@ -314,6 +326,7 @@ function removeBatchRow(id) {
 }
 
 function calculateBatch() {
+  trackEvent('batch_calculate_used', {});
   const rows = document.querySelectorAll('#batch-tbody tr');
   if (!rows.length) { alert('Add at least one product row.'); return; }
 
@@ -353,6 +366,7 @@ function clearBatch() {
 // FEATURE 6: BREAK-EVEN VOLUME
 // ============================================
 function calculateBreakevenVolume() {
+  trackEvent('breakeven_volume_used', {});
   const profitText = document.getElementById('r-profit')?.textContent || '';
   if (!profitText || profitText === '—') {
     document.getElementById('bev-message').textContent = 'Run the main calculator first to get profit per unit.';
