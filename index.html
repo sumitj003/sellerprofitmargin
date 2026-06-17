@@ -22,6 +22,34 @@
   <meta property="og:url" content="https://www.sellerprofitmargin.com/" />
   <meta property="og:type" content="website" />
 
+  <!-- Organization Schema — for branded search and knowledge panel -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SellerProfitMargin",
+    "url": "https://www.sellerprofitmargin.com",
+    "logo": "https://www.sellerprofitmargin.com/favicon.png",
+    "description": "Free profit margin calculator and educational resource for ecommerce sellers on Etsy, Shopify, Amazon FBA, Walmart, eBay and TikTok Shop.",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- WebSite Schema — enables sitelinks search box eligibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SellerProfitMargin",
+    "url": "https://www.sellerprofitmargin.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.sellerprofitmargin.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <!-- WebApplication Schema -->
   <script type="application/ld+json">
   {
@@ -484,19 +512,19 @@
     <div class="affiliate-section" style="margin-top:52px">
       <div class="section-label">Recommended tools for sellers</div>
       <div class="affiliate-grid">
-        <a class="aff-card" href="https://shopify.com" target="_blank" rel="noopener sponsored">
+        <a class="aff-card" href="https://shopify.com" target="_blank" rel="noopener sponsored" onclick="trackEvent('affiliate_click', {partner:'shopify'})">
           <span class="aff-icon">🔵</span>
           <div class="aff-title">Start on Shopify</div>
           <div class="aff-desc">Launch your store in minutes. Best for scaling past Etsy. Free trial available.</div>
           <div class="aff-cta">Try free for 3 days →</div>
         </a>
-        <a class="aff-card" href="https://erank.com?fpr=sumit74" target="_blank" rel="noopener sponsored">
+        <a class="aff-card" href="https://erank.com?fpr=sumit74" target="_blank" rel="noopener sponsored" onclick="trackEvent('affiliate_click', {partner:'erank'})">
           <span class="aff-icon">📈</span>
           <div class="aff-title">Etsy SEO with eRank</div>
           <div class="aff-desc">Find winning keywords, track competitors, and rank your Etsy listings higher.</div>
           <div class="aff-cta">Get started free →</div>
         </a>
-        <a class="aff-card" href="https://junglescout.com" target="_blank" rel="noopener sponsored">
+        <a class="aff-card" href="https://junglescout.com" target="_blank" rel="noopener sponsored" onclick="trackEvent('affiliate_click', {partner:'junglescout'})">
           <span class="aff-icon">🌿</span>
           <div class="aff-title">Amazon FBA Research</div>
           <div class="aff-desc">Jungle Scout finds profitable products, validates demand, and tracks BSR trends.</div>
