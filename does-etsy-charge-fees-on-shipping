@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Does Etsy Charge Fees on Shipping? Yes — Here's Exactly How Much</title>
+<meta name="description" content="Etsy charges its 6.5% transaction fee and payment processing on shipping the buyer pays, not just the item price. Here is what it costs you and how to price for it.">
+<link rel="canonical" href="https://www.sellerprofitmargin.com/does-etsy-charge-fees-on-shipping.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Does Etsy Charge Fees on Shipping?">
+<meta property="og:url" content="https://www.sellerprofitmargin.com/does-etsy-charge-fees-on-shipping.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Does Etsy Charge Fees on Shipping?",
+      "description": "Etsy charges the transaction fee and payment processing on the full order total including shipping the buyer paid.",
+      "datePublished": "2026-09-18",
+      "dateModified": "2026-09-18",
+      "author": {"@type":"Organization","name":"SellerProfitMargin"},
+      "publisher": {"@type":"Organization","name":"SellerProfitMargin"},
+      "mainEntityOfPage": "https://www.sellerprofitmargin.com/does-etsy-charge-fees-on-shipping.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.sellerprofitmargin.com/"},
+        {"@type":"ListItem","position":2,"name":"Does Etsy Charge Fees on Shipping?","item":"https://www.sellerprofitmargin.com/does-etsy-charge-fees-on-shipping.html"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type":"Question",
+          "name":"Does Etsy charge fees on shipping?",
+          "acceptedAnswer":{"@type":"Answer","text":"Yes. Etsy's 6.5% transaction fee and its payment processing fee are both calculated on the full order total, which includes the shipping the buyer paid. On a $30 item with $8 shipping, Etsy works out its fees on $38, not $30."}
+        },
+        {
+          "@type":"Question",
+          "name":"Is it cheaper to offer free shipping on Etsy?",
+          "acceptedAnswer":{"@type":"Answer","text":"It makes no difference to the fees. Whether you charge $8 shipping separately or build it into a higher item price, the order total is the same and so is Etsy's cut. Free shipping is worth doing for search placement, not for fee savings."}
+        },
+        {
+          "@type":"Question",
+          "name":"Does Etsy charge fees on sales tax?",
+          "acceptedAnswer":{"@type":"Answer","text":"No. Etsy collects and remits sales tax in most US states and does not charge its transaction fee on the tax portion. Fees apply to the item price plus shipping, not to tax."}
+        },
+        {
+          "@type":"Question",
+          "name":"Does Etsy charge fees on gift wrap?",
+          "acceptedAnswer":{"@type":"Answer","text":"Yes. Gift wrap charges are treated the same as shipping and are included in the total the transaction fee is calculated on."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{--bg:#0a0f1c;--surface:#131b2e;--surface-2:#1b2540;--line:#26314d;--ink:#e8edf7;--ink-dim:#96a2bd;--accent:#2dd4bf;--radius:10px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);padding:16px 0}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:700;font-size:17px;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+nav a{color:var(--ink-dim);text-decoration:none;font-size:14px;margin-left:18px}
+nav a:hover{color:var(--accent)}
+h1{font-size:clamp(25px,4.4vw,34px);line-height:1.2;margin:34px 0 14px;letter-spacing:-.02em}
+.answer{background:var(--surface);border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;padding:18px 20px;margin:0 0 30px}
+.answer p{margin:0;color:var(--ink);font-size:17px}
+h2{font-size:22px;margin:36px 0 10px;letter-spacing:-.015em}
+p,li{color:#c2cbdd;max-width:70ch}
+ul{padding-left:20px}li{margin-bottom:7px}
+a{color:var(--accent)}
+table.ex{width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px;background:var(--surface);border-radius:var(--radius);overflow:hidden}
+table.ex th{text-align:left;padding:11px 14px;background:var(--surface-2);font-size:13px;color:var(--ink-dim);font-weight:600}
+table.ex td{padding:10px 14px;border-top:1px solid var(--line);color:#c2cbdd}
+table.ex td:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+table.ex tr:last-child td{font-weight:700;color:var(--ink)}
+.cta{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:30px 0;text-decoration:none}
+.cta strong{display:block;color:var(--accent);font-size:17px;margin-bottom:4px}
+.cta span{color:var(--ink-dim);font-size:14.5px}
+.adslot{margin:30px 0;min-height:90px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:var(--radius);color:#4b5875;font-size:12px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";float:right;color:var(--accent);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:24px 0 40px;font-size:13px;color:var(--ink-dim)}
+footer a{color:var(--ink-dim);margin-right:14px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <a class="logo" href="/">Seller<span>ProfitMargin</span></a>
+    <nav>
+      <a href="/etsy-fee-calculator.html">Etsy calculator</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h1>Does Etsy charge fees on shipping?</h1>
+
+  <!-- ANSWER FIRST. This block is what Google lifts for the featured
+       snippet. Keep it under 50 words and answer in the first sentence. -->
+  <div class="answer">
+    <p>Yes. Etsy's 6.5% transaction fee and its payment processing fee are both calculated on the full order total, which includes the shipping the buyer paid. Sell a $30 item with $8 shipping and Etsy works out its fees on $38, not $30.</p>
+  </div>
+
+  <h2>What it costs on a real order</h2>
+  <p>Here is the same $30 item with $8 shipping, showing exactly where the shipping portion gets taxed by Etsy.</p>
+
+  <table class="ex">
+    <tr><th>Line</th><th>Amount</th></tr>
+    <tr><td>Item price</td><td>$30.00</td></tr>
+    <tr><td>Shipping charged to buyer</td><td>$8.00</td></tr>
+    <tr><td>Order total Etsy calculates fees on</td><td>$38.00</td></tr>
+    <tr><td>Transaction fee (6.5% of $38)</td><td>$2.47</td></tr>
+    <tr><td>Payment processing (3% of $38 + $0.25)</td><td>$1.39</td></tr>
+    <tr><td>Fees you paid on the shipping alone</td><td>$0.76</td></tr>
+  </table>
+
+  <p>Seventy-six cents does not sound like much. Across 200 orders it is $152 you never saw as a line item anywhere in your Etsy dashboard.</p>
+
+  <div class="adslot">ad slot 1</div>
+
+  <h2>Which fees apply to shipping and which don't</h2>
+  <ul>
+    <li><strong>Transaction fee (6.5%)</strong> — applies to shipping. Yes.</li>
+    <li><strong>Payment processing</strong> — applies to shipping. Yes.</li>
+    <li><strong>Listing fee ($0.20)</strong> — flat, unaffected by shipping.</li>
+    <li><strong>Offsite Ads (12–15%)</strong> — applies to the full order including shipping.</li>
+    <li><strong>Sales tax</strong> — Etsy does <em>not</em> charge its transaction fee on the tax it collects.</li>
+    <li><strong>Gift wrap</strong> — treated like shipping. Fees apply.</li>
+  </ul>
+
+  <h2>Does free shipping save you anything?</h2>
+  <p>No. This is the part people get wrong in both directions. If you charge $8 shipping on a $30 item, or bundle it into a $38 item with free shipping, the order total is $38 either way and Etsy's cut is identical.</p>
+  <p>Free shipping is still worth doing, because Etsy's search favours listings that offer it and US buyers convert better on it. But do it for placement, not because you think it dodges a fee. It doesn't.</p>
+
+  <h2>How to price for it</h2>
+  <p>Work backwards from the order total, not the item price. Add your product cost, your real postage cost and the fixed fees, then divide by one minus the percentage fees. That gives you the floor. Anything above it is margin.</p>
+
+  <a class="cta" href="/etsy-fee-calculator.html">
+    <strong>Run your own numbers</strong>
+    <span>The Etsy calculator has separate fields for shipping you charge and shipping you pay, so it handles this correctly.</span>
+  </a>
+
+  <h2>Related questions</h2>
+
+  <details>
+    <summary>Does Etsy charge fees on sales tax?</summary>
+    <p>No. Etsy collects and remits sales tax in most US states and does not take its transaction fee on the tax portion. Fees apply to item price plus shipping only.</p>
+  </details>
+  <details>
+    <summary>Does Etsy charge fees on gift wrap?</summary>
+    <p>Yes. Gift wrap is treated the same as shipping and is included in the total the transaction fee is calculated on.</p>
+  </details>
+  <details>
+    <summary>Do I pay fees on shipping if I use Etsy shipping labels?</summary>
+    <p>Yes, and they are separate things. The fee on the shipping the buyer paid you is charged regardless. Buying a label through Etsy is a separate cost, though the discounted label rate usually saves you more than the fee costs.</p>
+  </details>
+  <details>
+    <summary>Does Etsy refund fees if the buyer returns the item?</summary>
+    <p>You get the transaction fee back when you issue a full refund. The payment processing fee is generally not returned, and the listing fee never is.</p>
+  </details>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/terms-and-conditions.html">Terms</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <p style="margin-top:14px">© 2026 SellerProfitMargin.com · Not affiliated with Etsy.</p>
+  </div>
+</footer>
+
+</body>
+</html>
