@@ -1,0 +1,317 @@
+/* =============================================================
+   SellerProfitMargin - drop-in calculator engine
+   -------------------------------------------------------------
+   HOW TO USE
+
+   1. Upload this file to your repo root as spm-calculator.js
+   2. On any page, paste these two lines right after the <h1>:
+
+        <div class="spm-calc" data-platform="etsy"></div>
+        <script src="/spm-calculator.js" defer></script>
+
+   3. Change data-platform to one of:
+        etsy   amazon   shopify   ebay   walmart   tiktok
+
+   That's it. The calculator builds itself, styles itself, and
+   starts working. Put as many on a page as you like.
+
+   FEE RATES: every rate is an editable field on the page, and the
+   defaults live in the PLATFORMS block below. Check the current
+   rates in each seller dashboard and update the "val" numbers.
+   Rates change; a hardcoded calculator goes stale and stops
+   ranking. Editable ones don't.
+   ============================================================= */
+
+(function () {
+  "use strict";
+
+  /* ---------- fee definitions ------------------------------
+     kind : "pct"  = percentage, user-editable
+            "flat" = fixed dollar amount, user-editable
+     base : "gross" = charged on price + shipping buyer paid
+            "price" = charged on item price only
+     opt  : true    = shown as an on/off checkbox
+     --------------------------------------------------------- */
+  var PLATFORMS = {
+    etsy: {
+      name: "Etsy",
+      fees: [
+        { id: "trans", label: "Transaction fee",      kind: "pct",  val: 6.5,  base: "gross" },
+        { id: "proc",  label: "Payment processing",   kind: "pct",  val: 3,    base: "gross" },
+        { id: "procf", label: "Processing flat fee",  kind: "flat", val: 0.25 },
+        { id: "list",  label: "Listing fee",          kind: "flat", val: 0.20 },
+        { id: "offs",  label: "Offsite Ads fee",      kind: "pct",  val: 15,   base: "gross", opt: true }
+      ]
+    },
+    amazon: {
+      name: "Amazon FBA",
+      fees: [
+        { id: "ref",   label: "Referral fee",         kind: "pct",  val: 15,   base: "gross" },
+        { id: "fba",   label: "FBA fulfilment fee",   kind: "flat", val: 4.75 },
+        { id: "store", label: "Monthly storage share",kind: "flat", val: 0.35 }
+      ]
+    },
+    shopify: {
+      name: "Shopify",
+      fees: [
+        { id: "proc",  label: "Payment processing",   kind: "pct",  val: 2.9,  base: "gross" },
+        { id: "procf", label: "Processing flat fee",  kind: "flat", val: 0.30 },
+        { id: "app",   label: "App / plan cost share",kind: "flat", val: 0 }
+      ]
+    },
+    ebay: {
+      name: "eBay",
+      fees: [
+        { id: "fvf",   label: "Final value fee",      kind: "pct",  val: 13.25, base: "gross" },
+        { id: "fvff",  label: "Per-order flat fee",   kind: "flat", val: 0.30 },
+        { id: "promo", label: "Promoted listing fee", kind: "pct",  val: 2,     base: "price", opt: true }
+      ]
+    },
+    walmart: {
+      name: "Walmart",
+      fees: [
+        { id: "ref",   label: "Referral fee",         kind: "pct",  val: 8,    base: "gross" },
+        { id: "wfs",   label: "WFS fulfilment fee",   kind: "flat", val: 0 }
+      ]
+    },
+    tiktok: {
+      name: "TikTok Shop",
+      fees: [
+        { id: "ref",   label: "Referral fee",         kind: "pct",  val: 6,    base: "gross" },
+        { id: "tx",    label: "Transaction fee",      kind: "pct",  val: 2,    base: "gross" },
+        { id: "aff",   label: "Creator commission",   kind: "pct",  val: 10,   base: "price" }
+      ]
+    }
+  };
+
+  /* ---------- styles, injected once ---------- */
+  var CSS = [
+    ".spm{--s:#131b2e;--s2:#1b2540;--ln:#26314d;--tx:#e8edf7;--dim:#96a2bd;--ac:#2dd4bf;--ok:#4ade80;--no:#f87171;",
+    "background:var(--s);border:1px solid var(--ln);border-radius:10px;padding:20px;color:var(--tx);",
+    "font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0 0 28px}",
+    ".spm *{box-sizing:border-box}",
+    ".spm-g{display:grid;grid-template-columns:1fr 1fr;gap:13px}",
+    "@media(max-width:640px){.spm-g{grid-template-columns:1fr}}",
+    ".spm label{display:block;font-size:12.5px;color:var(--dim);margin-bottom:5px}",
+    ".spm-f{position:relative}",
+    ".spm-pre,.spm-post{position:absolute;top:50%;transform:translateY(-50%);color:var(--dim);font-size:15px;pointer-events:none}",
+    ".spm-pre{left:12px}.spm-post{right:12px}",
+    ".spm input[type=number]{width:100%;padding:10px 12px 10px 27px;background:#0a0f1c;border:1px solid var(--ln);",
+    "border-radius:7px;color:var(--tx);font-size:16px;font-family:inherit}",
+    ".spm input.spm-pct{padding:10px 28px 10px 12px}",
+    ".spm input.spm-plain{padding-left:12px}",
+    ".spm input[type=number]:focus{outline:2px solid var(--ac);outline-offset:1px;border-color:transparent}",
+    ".spm-hd{font-size:12.5px;color:var(--dim);margin:20px 0 12px;padding-top:15px;border-top:1px solid var(--ln)}",
+    ".spm-tg{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--dim);cursor:pointer;margin-top:8px}",
+    ".spm-tg input{width:16px;height:16px;accent-color:var(--ac);cursor:pointer}",
+    ".spm-r{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:20px}",
+    "@media(max-width:640px){.spm-r{grid-template-columns:1fr}}",
+    ".spm-st{background:var(--s2);border-radius:10px;padding:15px}",
+    ".spm-st b{display:block;font-size:11.5px;color:var(--dim);margin-bottom:5px;font-weight:400}",
+    ".spm-st i{font-style:normal;font-size:24px;font-weight:700;letter-spacing:-.02em}",
+    ".spm-ok{color:var(--ok)}.spm-no{color:var(--no)}",
+    ".spm table{width:100%;border-collapse:collapse;margin-top:16px;font-size:13.5px}",
+    ".spm td{padding:7px 0;border-bottom:1px solid var(--ln);color:var(--dim)}",
+    ".spm td+td{text-align:right;color:var(--tx);font-variant-numeric:tabular-nums}",
+    ".spm tr:last-child td{border-bottom:none;font-weight:700;color:var(--tx);padding-top:11px}",
+    ".spm-note{margin:15px 0 0;padding:10px 12px;background:var(--s2);border-radius:7px;font-size:12.5px;color:var(--dim);line-height:1.5}"
+  ].join("");
+
+  function injectCSS() {
+    if (document.getElementById("spm-css")) return;
+    var s = document.createElement("style");
+    s.id = "spm-css";
+    s.textContent = CSS;
+    document.head.appendChild(s);
+  }
+
+  function money(n) {
+    return (n < 0 ? "-$" : "$") +
+      Math.abs(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  var uid = 0;
+
+  function build(el) {
+    var key = (el.getAttribute("data-platform") || "etsy").toLowerCase();
+    var cfg = PLATFORMS[key];
+    if (!cfg) {
+      el.textContent = "Unknown platform: " + key;
+      return;
+    }
+
+    var n = "spm" + (++uid);
+    el.className = "spm";
+
+    /* --- core inputs, same for every platform --- */
+    var html =
+      '<div class="spm-g">' +
+        fld(n + "price",  "Selling price",                "$", 29.99) +
+        fld(n + "cost",   "What the product costs you",   "$", 8.00) +
+        fld(n + "shipc",  "Shipping you charge the buyer","$", 0) +
+        fld(n + "shipp",  "Shipping it costs you",        "$", 4.50) +
+        fld(n + "ads",    "Ad spend per sale",            "$", 0) +
+        fld(n + "qty",    "Units sold",                   "",  1, 1) +
+      '</div>';
+
+    /* --- fee rate inputs, per platform --- */
+    html += '<p class="spm-hd">' + esc(cfg.name) +
+            ' fee rates — these change, so check yours and edit here.</p><div class="spm-g">';
+
+    var opts = [];
+    cfg.fees.forEach(function (f) {
+      if (f.opt) { opts.push(f); return; }
+      html += f.kind === "pct"
+        ? pctFld(n + f.id, f.label, f.val)
+        : fld(n + f.id, f.label, "$", f.val);
+    });
+    html += "</div>";
+
+    opts.forEach(function (f) {
+      html += '<label class="spm-tg"><input type="checkbox" id="' + n + f.id + 'on"> ' +
+              esc(f.label) + ' applies to this sale (' + f.val +
+              (f.kind === "pct" ? "%" : "") + ')</label>';
+    });
+
+    /* --- results --- */
+    html +=
+      '<div class="spm-r">' +
+        '<div class="spm-st"><b>Net profit</b><i id="' + n + 'profit">—</i></div>' +
+        '<div class="spm-st"><b>Profit margin</b><i id="' + n + 'margin">—</i></div>' +
+        '<div class="spm-st"><b>Break-even price</b><i id="' + n + 'break">—</i></div>' +
+      '</div><table><tbody>' +
+        row(n + "in",   "Money in (price + shipping charged)") +
+        row(n + "pc",   "Product cost") +
+        row(n + "sp",   "Shipping you pay");
+
+    cfg.fees.forEach(function (f) { html += row(n + f.id + "v", f.label); });
+
+    html +=
+        row(n + "ad",  "Ad spend") +
+        row(n + "net", "You keep") +
+      '</tbody></table>' +
+      '<p class="spm-note">Percentage fees marked as charged on the order total include the shipping ' +
+      'the buyer paid. Nothing you type here leaves your browser.</p>';
+
+    el.innerHTML = html;
+
+    /* --- wire it up --- */
+    var ids = ["price", "cost", "shipc", "shipp", "ads", "qty"];
+    cfg.fees.forEach(function (f) { ids.push(f.opt ? f.id + "on" : f.id); });
+
+    var run = function () { compute(n, cfg); };
+    ids.forEach(function (id) {
+      var i = document.getElementById(n + id);
+      if (!i) return;
+      i.addEventListener("input", run);
+      i.addEventListener("change", run);
+    });
+    run();
+  }
+
+  function fld(id, label, pre, val, min) {
+    var cls = pre ? "" : ' class="spm-plain"';
+    return '<div><label for="' + id + '">' + esc(label) + '</label><div class="spm-f">' +
+      (pre ? '<span class="spm-pre">' + pre + "</span>" : "") +
+      '<input' + cls + ' type="number" id="' + id + '" value="' + val +
+      '" min="' + (min === undefined ? 0 : min) + '" step="' + (min === 1 ? "1" : "0.01") +
+      '" inputmode="decimal"></div></div>';
+  }
+
+  function pctFld(id, label, val) {
+    return '<div><label for="' + id + '">' + esc(label) + '</label><div class="spm-f">' +
+      '<span class="spm-post">%</span><input class="spm-pct" type="number" id="' + id +
+      '" value="' + val + '" min="0" max="100" step="0.05" inputmode="decimal"></div></div>';
+  }
+
+  function row(id, label) {
+    return "<tr><td>" + esc(label) + '</td><td id="' + id + '">—</td></tr>';
+  }
+
+  function num(id) {
+    var e = document.getElementById(id);
+    return e ? (+e.value || 0) : 0;
+  }
+
+  function compute(n, cfg) {
+    var price = num(n + "price"),
+        cost  = num(n + "cost"),
+        shipC = num(n + "shipc"),
+        shipP = num(n + "shipp"),
+        ads   = num(n + "ads"),
+        qty   = Math.max(1, num(n + "qty") || 1);
+
+    var gross = price + shipC;
+    var rateG = 0, rateP = 0, flats = 0, each = {};
+
+    cfg.fees.forEach(function (f) {
+      var on = true, v;
+      if (f.opt) {
+        var box = document.getElementById(n + f.id + "on");
+        on = box ? box.checked : false;
+        v = f.val;
+      } else {
+        v = num(n + f.id);
+      }
+      if (!on) { each[f.id] = 0; return; }
+
+      if (f.kind === "pct") {
+        var r = v / 100;
+        var amt = (f.base === "price" ? price : gross) * r;
+        if (f.base === "price") rateP += r; else rateG += r;
+        each[f.id] = amt;
+      } else {
+        flats += v;
+        each[f.id] = v;
+      }
+    });
+
+    var feeTotal = 0;
+    for (var k in each) feeTotal += each[k];
+
+    var profit = gross - cost - shipP - feeTotal - ads;
+    var margin = price > 0 ? (profit / price) * 100 : 0;
+
+    // break-even: price where profit = 0
+    var denom = 1 - rateG - rateP;
+    var be = denom > 0
+      ? (cost + shipP + flats + ads - shipC * (1 - rateG)) / denom
+      : 0;
+    if (!isFinite(be) || be < 0) be = 0;
+
+    var p = document.getElementById(n + "profit");
+    p.textContent = money(profit * qty);
+    p.className = profit < 0 ? "spm-no" : "spm-ok";
+
+    document.getElementById(n + "margin").textContent = price > 0 ? margin.toFixed(1) + "%" : "—";
+    document.getElementById(n + "break").textContent  = money(be);
+
+    document.getElementById(n + "in").textContent = money(gross * qty);
+    document.getElementById(n + "pc").textContent = "-" + money(cost * qty);
+    document.getElementById(n + "sp").textContent = "-" + money(shipP * qty);
+    cfg.fees.forEach(function (f) {
+      var c = document.getElementById(n + f.id + "v");
+      if (c) c.textContent = each[f.id] ? "-" + money(each[f.id] * qty) : "$0.00";
+    });
+    document.getElementById(n + "ad").textContent  = "-" + money(ads * qty);
+    document.getElementById(n + "net").textContent = money(profit * qty);
+  }
+
+  function init() {
+    injectCSS();
+    var nodes = document.querySelectorAll(".spm-calc");
+    for (var i = 0; i < nodes.length; i++) build(nodes[i]);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
