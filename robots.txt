@@ -1,10 +1,8 @@
 User-agent: *
 Allow: /
 
-User-agent: Googlebot
-Allow: /
+# Block the duplicate copy of the site sitting in a subfolder.
+# Delete that folder from the repo as well - this line is a backstop, not a fix.
+Disallow: /sellerprofit-complete/
 
-User-agent: Googlebot-Image
-Allow: /
-
-Sitemap: https://sellerprofitmargin.com/sitemap.xml
+Sitemap: https://www.sellerprofitmargin.com/sitemap.xml
